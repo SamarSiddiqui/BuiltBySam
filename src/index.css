@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "@fortawesome/fontawesome-free/css/all.css";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #1e2125;
+    color: #efdfce;
+}
+
+@font-face {
+    font-family: 'PlaneBold';
+    src: url('./fonts/PlaneLight.woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GrandSlang';
+    src: url('./fonts/GrandSlang-Bold.woff ');
+    font-weight: normal;
+    font-style: normal;
+}
