@@ -7,16 +7,17 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import About from './components/About'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
+import Home from './components/Home'
 import Error from './components/Error'
 
 const appRouter = createBrowserRouter([
   {
-    path:'/',
-    element:<App/>,
+    path:"/",
+    element:<App />,
     children:[
-    // {path:"/",
-    //   element:<App/>
-    // },
+    {path:"/",
+      element:<Home/>
+    },
     {
       path:"/about",
       element:<About/>

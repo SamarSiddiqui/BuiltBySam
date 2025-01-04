@@ -6,8 +6,16 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        planeBold: ['PlaneBold'],
-        grandSlang:['GrandSlang']
+        planeLight: ['PlaneLight'],
+        planeBold:['PlaneBold'],
+        planeItalic:['PlaneItalic'],
+        grandSlangBold:['GrandSlangBold'],
+        grandSlangItalic:['GrandSlangItalic'],
+        grandSlangRoman:['GrandSlangRoman'],
+        migraBoldItalic:['MigraBoldItalic'],
+      },
+      colors: {
+        'custom-vanila': '#f0ede7',  
       },
     },
   },

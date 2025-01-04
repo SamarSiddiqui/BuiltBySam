@@ -11,18 +11,54 @@
 
 body{
     background-color: #1e2125;
-    color: #efdfce;
+    color: #e9dfce;
 }
 
+/* Plane Text */
 @font-face {
-    font-family: 'PlaneBold';
+    font-family: 'PlaneLight';
     src: url('./fonts/PlaneLight.woff2');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
-    font-family: 'GrandSlang';
+    font-family: 'PlaneBold';
+    src: url('./fonts/PlaneBold.woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PlaneItalic';
+    src: url('./fonts/PlaneItalic.woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Cursive Text */
+@font-face {
+    font-family: 'GrandSlangBold';
     src: url('./fonts/GrandSlang-Bold.woff ');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GrandSlangItalic';
+    src: url('./fonts/GrandSlang-Italic.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GrandSlangRoman';
+    src: url('./fonts/GrandSlang-Roman.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Migra Text */
+
+@font-face {
+    font-family: 'MigraBoldItalic';
+    src: url('./fonts/Migra-ExtraboldItalic.woff');
     font-weight: normal;
     font-style: normal;
 }
