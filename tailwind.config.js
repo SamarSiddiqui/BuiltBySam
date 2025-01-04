@@ -12,7 +12,7 @@ module.exports = {
         grandSlangBold:['GrandSlangBold'],
         grandSlangItalic:['GrandSlangItalic'],
         grandSlangRoman:['GrandSlangRoman'],
-        migraBoldItalic:['MigraBoldItalic'],
+        migraLight:['MigraLight',' sans-serif'],
       },
       colors: {
         'custom-vanila': '#f0ede7',  

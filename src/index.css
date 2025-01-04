@@ -57,8 +57,8 @@ body{
 /* Migra Text */
 
 @font-face {
-    font-family: 'MigraBoldItalic';
-    src: url('./fonts/Migra-ExtraboldItalic.woff');
+    font-family: 'MigraLight';
+    src: url('./fonts/Migra-Extralight.woff');
     font-weight: normal;
     font-style: normal;
 }
