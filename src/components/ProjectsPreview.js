@@ -1,10 +1,14 @@
 import React from 'react'
-
+import {projectData} from '../utils/constant'
+import ProjectCard from './ProjectCard'
 const ProjectsPreview = () => {
   return (
-    <div className='border-2 h-screen'>
-        
-      hello from projects
+    <div>
+      {
+        projectData.map((card)=>(
+          <ProjectCard key={card.id} title={card.title} description={card.description} projectImg={card.projectImg} techImages ={card.techStack}/>
+        ))
+      }
     </div>
   )
 }

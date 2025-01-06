@@ -17,6 +17,9 @@ module.exports = {
       colors: {
         'custom-vanila': '#f0ede7',  
       },
+      backgroundImage: {
+        'custom-linear': 'linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4))',
+      },
     },
   },
   plugins: [],

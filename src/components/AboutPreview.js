@@ -1,5 +1,5 @@
 import React from 'react'
-import Star_Svg from '../assets/star.svg'
+import Star_Svg from '../assets/svg/star.svg'
 import Profile_Img from '../assets/ProfileImg.jpg'
 const AboutPreview = () => {
   return (
