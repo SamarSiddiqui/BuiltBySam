@@ -3,9 +3,9 @@ import react from '../assets/tech-icons/react.png'
 import redux from '../assets/tech-icons/redux.png'
 import tailwind from '../assets/tech-icons/tailwind.png'
 import firebase from '../assets/tech-icons/firebase.png'
-// import javascript from '../assets/tech-icons/js.webp'
-// import css from '../assets/tech-icons/css.png'
-// import html from '../assets/tech-icons/html.png'
+import javascript from '../assets/tech-icons/js.webp'
+import css from '../assets/tech-icons/css.png'
+import html from '../assets/tech-icons/html.png'
 import api from '../assets/tech-icons/api.png'
 
 export const projectData = [
@@ -18,8 +18,8 @@ export const projectData = [
     },
     {
         id:"project2",
-        title: "Project 2",
-        description:"Hello this is Project 2."
+        title: "Spotify Clone",
+        description:"   "
     },
     {
         id:"project3",
@@ -32,3 +32,7 @@ export const projectData = [
         description:"Hello this is Project 4."
     },
 ] 
+
+export const hardSkills = ['Html5','Css3','JavaScript','React','Gsap','Tailwind Css','Redux','Context API','Postman','Jest','GitHub','Firebase','Canva','Photoshop']
+
+export const softSkills = ['Passion for Problems','Empathy','Adaptability','Team Working','Collabration','Commuinication','Curiosity','Detailed Oreinted','Time Management','Leadership']
