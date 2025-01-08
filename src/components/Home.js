@@ -21,8 +21,8 @@ const Home = () => {
       <VisualImpact/>
       <BioSection/>
       {/* Marquee */}
-      <div className="text-[clamp(20px,12vw,300px)] font-grandSlangItalic uppercase flex items-center">
-         <Marquee gradient={false} speed={200} className="" pauseOnHover={false}>
+      <div className="text-[clamp(50px,12vw,300px)] font-grandSlangItalic uppercase flex items-center mb-10">
+         <Marquee gradient={false} speed={150} className="" pauseOnHover={false}>
          Projects <span>.</span> Projects .
          </Marquee>
       </div>

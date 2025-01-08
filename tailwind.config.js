@@ -13,7 +13,8 @@ module.exports = {
         grandSlangItalic:['GrandSlangItalic'],
         grandSlangRoman:['GrandSlangRoman'],
         migraBoldItalic:['MigraBold'],
-        migraLight:['MigraLight',' sans-serif'],
+        migraLightItalic:['MigraLightItalic'],
+        migraLight:['MigraLight']
       },
       colors: {
         'custom-vanila': '#f6f3ef',  
@@ -21,6 +22,11 @@ module.exports = {
       backgroundImage: {
         'custom-linear': 'linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4))',
       },
+      screens: {
+        largerMobile: { max: "425px" },
+        smallerTab: { max: "768px" },
+        proTablet: { max: "995px" },
+      }
     },
   },
   plugins: [],

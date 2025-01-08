@@ -1,41 +1,64 @@
-import React from 'react'
-const ProjectCard = ({title,description,projectImg,techImages}) => {
-    
+import React from "react";
+const ProjectCard = ({ title, description, projectImg, techImages }) => {
   return (
-    <div className='min-h-[90vh]   flex items-center justify-center '>
-      <div className='w-[80%] min-h-[90%]  relative cursor-pointer group'>
-        <img src={projectImg} alt='netflix_bg' className='rounded-3xl w-full h-full '/>
-        <div className='rounded-3xl absolute top-0  w-full h-full  hidden group-hover:block bg-custom-linear backdrop-blur-lg'>
-           <div className='w-[85%] m-auto  h-full flex flex-col justify-between '>
-            {/* UpperSection */}
-                <div className='p-5 h-full'>
-                  <h1 className='text-5xl py-5 font-planeItalic font-bold'>{title}</h1>
-                  <p className='text-xl w-2/3 leading-10 font-planeItalic'>{description}</p>
-                </div>
-                {/* bottomSection */}
-                <div className=' flex justify-between p-1 py-10'>
-                  <div className='text-3xl'>
-                    {
-                      techImages?.map((image,index)=>(
-                        <div className=' border-gray-800 inline-flex rounded-full mx-2' key={index}>
-                        <img src={image} className='h-7 ' alt='react'/>
-                        </div>
-                          
-                      ))
-                    }
-                                      
+    <div className="min-h-screen flex justify-center items-center  my-1">
+    <div className="w-[85%]  relative cursor-pointer group proTablet:w-11/12 m-5">
+      {/* Image */}
+      <div className="w-full h-full">
+        <img
+          src={projectImg}
+          alt={title}
+          className="object-cover rounded-2xl  proTablet:rounded-t-2xl proTablet:rounded-b-none"
+        />
+      </div>
+  
+      {/* Description */}
+      <div
+        className={`hidden group-hover:block rounded-2xl bg-custom-linear backdrop-blur-lg absolute h-full w-full top-0 
+        proTablet:relative proTablet:bottom-0 proTablet:h-auto proTablet:block proTablet:bg-black proTablet:backdrop-blur-none proTablet:rounded-b-2xl proTablet:rounded-t-none`}
+      >
+        <div className="w-[85%]  m-auto h-full flex flex-col justify-between proTablet:w-full">
+          {/* UpperSection */}
+          <div className="p-5 h-full flex flex-col justify-between proTablet:p-0">
+            <div className="p-1 proTablet:mx-7">
+              <h1 className="text-[clamp(25px,3.5vw,100px)] font-grandSlangBold font-bold  proTablet:my-2">
+                {title}
+              </h1>
+              <p className="text-[clamp(15px,1.5vw,20px)] w-2/3 leading-10 font-planeItalic proTablet:leading-6 proTablet:w-11/12">
+                {description}
+              </p>
+            </div>
+  
+            {/* BottomSection */}
+            <div className="flex justify-between py-2 proTablet:py-1 smallerTab:flex-col smallerTab:items-center proTablet:mx-4">
+              {/* IconsImages */}
+              <div className="text-3xl flex items-center proTablet:text-sm">
+                {techImages?.map((image, index) => (
+                  <div
+                    className=" inline-flex rounded-full mx-2"
+                    key={index}
+                  >
+                    <img src={image} className="h-7" alt="tech-icon" />
                   </div>
-                  <div>
-                  <button className='text-lg  bg-gray-200/100 text-black py-1 px-5 mx-3 rounded-3xl '>View Source</button>
-                  <button className='text-lg bg-gray-200/100 text-black py-1 px-5 mx-3 rounded-3xl'>See It Live</button>
-
-                  </div>
-                </div>
-            </div> 
+                ))}
+              </div>
+  
+              <div className="proTablet:my-5 ">
+                <button className="text-lg bg-gray-200/100 text-black py-1 px-5 mx-3 rounded-3xl proTablet:px-3 proTablet:text-sm">
+                  View Source
+                </button>
+                <button className="text-lg bg-gray-200/100 text-black py-1 px-5 mx-3 rounded-3xl proTablet:px-3 proTablet:text-sm">
+                  See It Live
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  )
-}
+  </div>
+  
+  );
+};
 
-export default ProjectCard
+export default ProjectCard;

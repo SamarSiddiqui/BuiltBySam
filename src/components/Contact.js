@@ -2,33 +2,34 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <div className='min-h-screen'>
+    <div className='min-h-screen flex flex-col'>
       {/* AnimatedHeading */}
-      <div className=''>
-        <div className=' flex flex-col items-center font-migraLight'>
+      <div className=' py-3 largerMobile:py-12'>
+        <div className=' flex flex-col items-center font-migraLightItalic'>
           {/* first-line */}
-          <div className=' flex gap-10 mt-10'>
-            <div className='text-6xl'>Lets<br/>create</div>
-            <h1 className='text-9xl'>something</h1>
+          <div className=' flex gap-10 mt-10  leading-[0.8] largerMobile:leading-[1.1] largerMobile:items-center largerMobile:gap-3'>
+            <div className='text-[clamp(30px,5vw,50px)]  flex items-center text-right'>Lets<br/>create</div>
+            <h1 className='text-[clamp(60px,12vw,200px)]'>something</h1>
           </div>
           {/* second-line */}
-          <div className=''>
-            <h1 className='text-[150px]'>MEANINGFUL</h1>
+          <div className='text-[clamp(55px,12vw,220px)] leading-[1]'>
+            <h1 className='largerMobile:leading-[1.1]'>MEANINGFUL</h1>
           </div>
           {/* thrid-line */}
           <div className=' flex items-center'>
-            <h1 className='font-bold text-9xl'>TOGETHER</h1>
-            <div className='text-6xl'>(but not forever)</div>
+            <h1 className='font-bold text-[clamp(36px,5vw,80px)] leading-[0.1] largerMobile:leading-[1] px-1'>TOGETHER</h1>
+            <div className='font-bold text-[clamp(25px,5vw,80px)] ml-2'>(but not forever)</div>
           </div>
         </div>
-        <div className=' flex justify-center font-planeBold'>
-          <button className=' py-3 px-10 my-5 rounded-full text-black bg-custom-vanila text-sm '><a href='mailto:samar.r.siddiqui@gmail.com'>CONTACT ME 👋🏻</a></button>
+        <div className='justify-center  flex items- font-planeBold'>
+          <button className=' py-3 px-10 my-7 rounded-full text-black bg-custom-vanila text-sm font-bold largerMobile:m-14 largerMobile:px-[2.5rem] '><a href='mailto:samar.r.siddiqui@gmail.com '>CONTACT ME 👋🏻</a></button>
         </div>
       </div>
+
       {/* SocialIcons */}
-      <div className=' font-planeBold'>
-        <div className=' flex justify-between items-center'>
-          <div className=' text-black p-5 text-lg'>
+      <div className='font-planeBold h-full flex-1 flex flex-col justify-between '>
+        <div className=' smallerTab:flex-1 flex justify-between items-center  proTablet:flex  proTablet:flex-col smallerTab:justify-center'>
+          <div className=' text-black   p-5 text-lg'>
             {/* Instagram */}
           <a href='https://www.instagram.com/samsid__?igsh=MTgxMHpoY3prZzNkMQ==' target='blank'>
         <i className="fa-brands fa-instagram  rounded-full p-2.5  mx-2 bg-custom-vanila cursor-pointer"></i>
@@ -46,8 +47,8 @@ const Contact = () => {
         <i className="fa-brands fa-github  rounded-full p-2.5  mx-2 bg-custom-vanila cursor-pointer"></i>
         </a>
           </div>
-          <div>
-            <h1 className='mx-5  py-2 px-5 rounded-full  text-sm text-black bg-custom-vanila font-bold cursor-pointer'>RESUME<i className="fa-solid fa-download ml-2 "></i></h1>
+          <div className=' smallerTab:my-2'>
+            <h1 className='mx-5  py-2 px-5 rounded-full  text-sm text-black bg-custom-vanila font-bold cursor-pointer '>RESUME<i className="fa-solid fa-download ml-2 "></i></h1>
           </div>
         </div>
         <div className='text-center text-sm my-3'>Samar Siddiqui 2025 🖤</div>

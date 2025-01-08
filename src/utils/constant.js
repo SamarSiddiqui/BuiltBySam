@@ -33,6 +33,6 @@ export const projectData = [
     },
 ] 
 
-export const hardSkills = ['Html5','Css3','JavaScript','React','Gsap','Tailwind Css','Redux','Context API','Postman','Jest','GitHub','Firebase','Canva','Photoshop']
+export const hardSkills = ['Html5','Css3','JavaScript','React','Gsap','Tailwind Css','Redux','Context API','Postman','Jest','GitHub','Firebase','Canva','Photoshop','& more']
 
 export const softSkills = ['Passion for Problems','Empathy','Adaptability','Team Working','Collabration','Commuinication','Curiosity','Detailed Oreinted','Time Management','Leadership']
