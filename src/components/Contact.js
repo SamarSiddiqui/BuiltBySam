@@ -4,16 +4,16 @@ const Contact = () => {
   return (
     <div className='min-h-screen flex flex-col'>
       {/* AnimatedHeading */}
-      <div className=' py-3 largerMobile:py-12'>
-        <div className=' flex flex-col items-center font-migraLightItalic'>
+      <div className=' py-3 '>
+        <div className=' flex flex-col items-center font-migraLightItalic  smallerTab:py-14'>
           {/* first-line */}
-          <div className=' flex gap-10 mt-10  leading-[0.8] largerMobile:leading-[1.1] largerMobile:items-center largerMobile:gap-3'>
-            <div className='text-[clamp(30px,5vw,50px)]  flex items-center text-right'>Lets<br/>create</div>
-            <h1 className='text-[clamp(60px,12vw,200px)]'>something</h1>
+          <div className=' flex gap-10 mt-10  leading-[0.8] largerMobile:leading-[1.1] largerMobile:items-center largerMobile:gap-3 '>
+            <div className='text-[clamp(45px,5vw,100px)]  flex items-center text-right'>Lets<br/>create</div>
+            <h1 className='text-[clamp(65px,12vw,200px)]'>something</h1>
           </div>
           {/* second-line */}
-          <div className='text-[clamp(55px,12vw,220px)] leading-[1]'>
-            <h1 className='largerMobile:leading-[1.1]'>MEANINGFUL</h1>
+          <div className='text-[clamp(70px,10vw,220px)] leading-[1] '>
+            <h1 className=' largerMobile:leading-[1.1]'>MEANINGFUL</h1>
           </div>
           {/* thrid-line */}
           <div className=' flex items-center'>
@@ -29,7 +29,7 @@ const Contact = () => {
       {/* SocialIcons */}
       <div className='font-planeBold h-full flex-1 flex flex-col justify-between '>
         <div className=' smallerTab:flex-1 flex justify-between items-center  proTablet:flex  proTablet:flex-col smallerTab:justify-center'>
-          <div className=' text-black   p-5 text-lg'>
+          <div className=' text-black   p-5 text-xl'>
             {/* Instagram */}
           <a href='https://www.instagram.com/samsid__?igsh=MTgxMHpoY3prZzNkMQ==' target='blank'>
         <i className="fa-brands fa-instagram  rounded-full p-2.5  mx-2 bg-custom-vanila cursor-pointer"></i>
