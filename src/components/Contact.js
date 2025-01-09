@@ -40,7 +40,7 @@ const Contact = () => {
         </a>
         {/* LinkedIn */}
         <a href='https://www.linkedin.com/in/samar-siddiqui-763481236/' target='blank' rel='noopener noreferrer'>        
-        <i className="fa-brands fa-linkedin  rounded-full p-2.5  mx-2 bg-custom-vanila cursor-pointer"></i>
+        <i className="fa-brands fa-linkedin-in  rounded-full p-2.5  mx-2 bg-custom-vanila cursor-pointer"></i>
         </a>
         {/* GitHub */}
         <a href='https://github.com/SamarSiddiqui' target='blank' rel='noopener noreferrer'>

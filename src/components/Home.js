@@ -11,11 +11,12 @@ import Contact from "./Contact";
 import useLenis from "../utils/useLenis";
 
 const Home = () => {
-
+   
    useLenis()
  return (
-   <div className="relative overflow-x-hidden">
-      {/* <div className="w-10 h-10 bg-zinc-400 fixed top-0"></div> */}
+   <div className=" relative overflow-x-hidden">
+      {/* customCursor */}
+     
       <HeroSection/>
       <AboutPreview/>
       <VisualImpact/>

@@ -1,35 +1,61 @@
 import projectImg1 from '../assets/Projects/netflixBg.png'
+import projectImg2 from '../assets/Projects/spotifyBg.png'
+import projectImg3 from '../assets/Projects/appleBg.png'
+import projectImg4 from '../assets/Projects/snakeBg.png'
 import react from '../assets/tech-icons/react.png'
 import redux from '../assets/tech-icons/redux.png'
 import tailwind from '../assets/tech-icons/tailwind.png'
 import firebase from '../assets/tech-icons/firebase.png'
-import javascript from '../assets/tech-icons/js.webp'
+import javascript from '../assets/tech-icons/js.png'
 import css from '../assets/tech-icons/css.png'
 import html from '../assets/tech-icons/html.png'
 import api from '../assets/tech-icons/api.png'
+import json from '../assets/tech-icons/json.webp'
 
 export const projectData = [
     {
         id:"project1",
         title: "Netflix-GPT",
         projectImg:projectImg1,
-        description:`Explore Netflix-GPT: your AI-driven movie guide! Get personalized film suggestions powered by GPT and stay updated with real-time movie releases under "Airing Today," all fetched from the TMDB API. Discover your next favorite movie effortlessly with intelligent recommendations and live updates.`,
-        techStack:[react,tailwind,redux,firebase,api]
+        description:'Step into Netflix-GPT, your AI-powered movie companion! Enjoy personalized film suggestions with GPT, real-time "Airing Today" updates, and trending topics—all fetched seamlessly from the TMDB API. Effortlessly uncover your next favorite movie with intelligent recommendations and live data integration. 🎥✨',
+        techStack:[react,tailwind,redux,firebase,api],
+        links:{
+            liveLink:"https://netflix-gpt3010.web.app/",
+            sourceLink:"https://github.com/SamarSiddiqui/NetflixGPT"
+        }
     },
     {
         id:"project2",
         title: "Spotify Clone",
-        description:"   "
+        projectImg:projectImg2,
+        description:"Immerse yourself in a Spotify-inspired clone that brings music to life with sleek design and intuitive functionality. Powered by JSON, it dynamically fetches and manages song data to enhance user experience. Features include seamless navigation, real-time song tracking, dynamic volume control, and a captivating like button animation. 🎶✨",
+        techStack:[html,css,javascript,json],
+        links:{
+            liveLink:"https://samarsiddiqui.github.io/Spotify/",
+            sourceLink:"https://samarsiddiqui.github.io/Spotify/"
+        }
     },
     {
         id:"project3",
-        title: "Project 3",
-        description:"Hello this is Project 3."
+        title: "Apple Clone",
+        projectImg:projectImg3,
+        description:"Dive into my first project, an Apple-inspired clone that captures the brand's sleek and seamless essence. Featuring a dynamic hamburger dropdown menu and an infinite carousel showcasing Apple movies, this project merges elegant design with intuitive navigation. A polished blend of creativity and functionality awaits! 🍎✨",
+        techStack:[html,css,javascript],
+        links:{
+            liveLink:"https://samarsiddiqui.github.io/Apple/",
+            sourceLink:"https://github.com/SamarSiddiqui/Apple"
+        }
     },
     {
         id:"project4",
-        title: "Project 4",
-        description:"Hello this is Project 4."
+        title: "Venom Trail",
+        projectImg:projectImg4,
+        description:"Step into the world of classic gaming with my dynamic Snake game! Built with advanced DOM manipulation and JavaScript, it features a growing snake, collision detection, and engaging sound effects. Enjoy an immersive experience with seamless gameplay mechanics and intuitive controls that keep the fun alive. 🐍🎮✨",
+        techStack:[html,css,javascript],
+        links:{
+            liveLink:"https://samarsiddiqui.github.io/Neon-Snake/",
+            sourceLink:"https://github.com/SamarSiddiqui/Neon-Snake" 
+        }
     },
 ] 
 

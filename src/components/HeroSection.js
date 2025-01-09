@@ -3,7 +3,7 @@ import React from 'react'
 const HeroSection = () => {
   return (
     <div className="  min-h-[100vh] flex items-center ">
-    <div className="mb-12 w-full h-full text-center ">
+    <div className="smallerTab:mb-12 smallerTab:mt-0  mt-10 w-full h-full text-center ">
       <div className=" my-5 ">
        <h1 className="uppercase font-planeBold leading-[2] text-[clamp(10px,2.5vw,14px)] font-bold  ">Front-End Developer |  Crafting Interfaces</h1>
       </div>

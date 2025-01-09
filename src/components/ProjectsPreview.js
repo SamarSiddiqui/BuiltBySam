@@ -6,7 +6,7 @@ const ProjectsPreview = () => {
     <div>
       {
         projectData.map((card)=>(
-          <ProjectCard key={card.id} title={card.title} description={card.description} projectImg={card.projectImg} techImages ={card.techStack}/>
+          <ProjectCard key={card.id} title={card.title} description={card.description} projectImg={card.projectImg} techImages ={card.techStack} projectLink={card.links}/>
         ))
       }
     </div>
