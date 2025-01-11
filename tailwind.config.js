@@ -17,7 +17,8 @@ module.exports = {
         migraLight:['MigraLight']
       },
       colors: {
-        'custom-vanila': '#f6f3ef',  
+        'custom-vanila': '#f6f3ef', 
+        'custom-app':'#e9dfce' 
       },
       backgroundImage: {
         'custom-linear': 'linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4))',

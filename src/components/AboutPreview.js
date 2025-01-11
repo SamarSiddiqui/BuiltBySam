@@ -1,12 +1,14 @@
 import React from 'react'
 import Star_Svg from '../assets/svg/star.svg'
 import Profile_Img from '../assets/ProfileImg.jpg'
-const AboutPreview = () => {
+const AboutPreview = ({starRef}) => {
+  
+  
   return (
     <div className="min-h-[120vh] flex flex-col">
          {/* starImage */}
          <div className="w-full h-40 flex justify-center p-5">
-         <img className="h-14" src={Star_Svg} alt="star_svg"/>
+         <img className="star-img h-14 smallerTab:h-10" src={Star_Svg} alt="star_svg"/>
          </div>
          {/* AboutME */}
          <div className=" flex-1 flex ">
@@ -19,7 +21,7 @@ const AboutPreview = () => {
             </div>
             {/* Intro */}
             <div className='font-migraLight w-1/2  h-full text-[clamp(18px,2.5vw,19px)] smallerTab:w-full smallerTab:flex smallerTab:justify-center smallerTab:h-auto'>
-              <div className='mt-16 w-[55%] proTablet:w-[90%] smallerTab:px-5  '>
+              <div className='mt-16 w-[55%] proTablet:w-[90%] smallerTab:px-5 '>
                 
              <p className='my-1'>
                Nice to <span className='font-migraLightItalic'>meet you</span> all.

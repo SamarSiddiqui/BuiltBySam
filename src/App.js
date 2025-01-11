@@ -1,24 +1,17 @@
 import './App.css';
 import { Outlet } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import { useGSAP } from "@gsap/react";
-import gsap from 'gsap';
+import Cursor from './components/Cursor';
+import useLenis from "./utils/useLenis";
+
 
 function App() {
-  const container = document.querySelector('.main-container')
-
-  useGSAP(()=>{
-    container.addEventListener('mousemove',(e)=>{
-      gsap.to('.cursor',{
-       x:e.clientX,
-       y:e.clientY,
-      })         
- })
- })
+  useLenis()
   return (
-    <div className='main-container relative'>
-      <div className="cursor w-5 h-5 absolute z-[999] rounded-full bg-red-700"></div>
+    <div className={`relative overflow-x-hidden cursor-none`}>
+       <Cursor/>
      <Navbar/>
+      
      <Outlet/>
     </div>
   );
