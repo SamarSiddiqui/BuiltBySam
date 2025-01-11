@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, {  useState } from "react";
 import HeroSection from "./HeroSection";
 import AboutPreview from "./AboutPreview";
 import BioSection from "./BioSection";
@@ -10,15 +10,18 @@ import SkillSection from "./SkillSection";
 import Contact from "./Contact";
 import Loader from "./Loader";
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 const Home = () => {  
   const [loaderAnimation,setLoaderAnimation] = useState(false)
 
-   // const starRef = useRef()
-   
+   useGSAP(()=>{
+      
+   })
    const handleLoaderComplete = ()=>{
    const headings = document.querySelectorAll('.hero-heading')
-   gsap.fromTo(headings,
+   let tl = gsap.timeline()
+   tl.fromTo(headings,
       {opacity:0,y:100,scale:0.5}, //Initial state
       {
          opacity:1,
@@ -29,16 +32,16 @@ const Home = () => {
          ease:"power2.out",
          onComplete:()=>starAnimation()
          
-      } )
+      })
    
   }
 
  const starAnimation = ()=> {
   gsap.to('.star-img',{
-   y:-120,
+   y:-110,
    rotate:360,
    ease:"power1.out",
-   duration:2
+   duration:1.5
   })
  }
 
