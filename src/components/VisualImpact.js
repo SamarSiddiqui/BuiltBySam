@@ -8,65 +8,84 @@ gsap.registerPlugin(ScrollTrigger)
 const VisualImpact = () => {
 
   const visualHeadings = useRef()
-
+  
   useGSAP(()=>{
     gsap.from('.heading-right',{
-    //  rotateX:200,
+      //  rotateX:200,
      opacity:0,
      x:100,
-    //  ease:"power3.out",
+     //  ease:"power3.out",
      duration:1,
-    scrollTrigger:{
+     scrollTrigger:{
       trigger:'.heading-right',
       // markers:true,
       start:"top 60%",
       // end:"top 50%",
       scrub:true
     }
-    })
-    gsap.from('.heading-left',{
+  })
+  gsap.from('.heading-left',{
     //  rotateX:200,
      opacity:0,
      x:-100,
-    scrollTrigger:{
-      trigger:'.heading-left',
-      markers:true,
-      start:"top 80%",
-      end:"top 50%",
-      scrub:true
-    }
+     scrollTrigger:{
+       trigger:'.heading-left',
+      //  markers:true,
+       start:"top 80%",
+       end:"top 50%",
+       scrub:true
+      }
     })
-
+    
     gsap.from('.spinning-star',{
       //  rotateX:200,
        opacity:0,
        rotate:360,
        transformOrigin:"center 60%",
-      scrollTrigger:{
+       scrollTrigger:{
         trigger:'.spinning-star',
         // markers:true,
         start:"top 80%",
         // end:"top ",
         scrub:true
       }
-      })
+    })
     gsap.from('.down-arrow',{
       //  rotateX:200,
       //  opacity:0,
        rotate:90,
-      //  transformOrigin:"center 60%",
-      scrollTrigger:{
-        trigger:'.down-arrow',
-        // markers:true,
-        start:"top 80%",
-        // end:"top ",
-        scrub:true
-      }
+       transformOrigin:"10% 20% ",
+       scrollTrigger:{
+         trigger:'.down-arrow',
+         // markers:true,
+         start:"top 80%",
+         // end:"top ",
+         scrub:true
+        }
       })
-  
+      
+     const lastHeading = document.querySelector('.last-heading')
+     const words = lastHeading.textContent.split(" ")
+     lastHeading.innerHTML = words.map((word)=>`<span  style="display:inline-block" class="word">${word}</span>`).join(' ')
+     
+      
+  gsap.from(".word",{
+  y: 50,                    
+  opacity: 0,                
+  duration: 0.5,             
+  stagger: 0.1, 
+  ease: "power3.out", 
+  scrollTrigger:{
+    trigger:".word",
+    // markers:true,
+    start:"top 90%",
+    scrub:true
+  }
+})
+      
+    },{scope:visualHeadings})
+    
 
-
-  },{scope:visualHeadings})
 
 
 
@@ -82,8 +101,9 @@ const VisualImpact = () => {
       <h1 className='lowercase'>Inspired by</h1>
       <span className='down-arrow'>↓</span>
       </div>
-
-      <h1 className='text-[clamp(60px,10vw,200px)] pl-10 text-center largerMobile:pl-5 largerMobile:text-start '>Logic <span className='font-migraLight largerMobile:block largerMobile:text-center largerMobile:pr-10 '>&</span> <span className='largerMobile:text-center largerMobile:block largerMobile:pl-16 largerMobile:-mt-7 '>Beauty</span></h1>
+         
+         
+      <h1 className='last-heading text-[clamp(60px,10vw,200px)] pl-10 text-center largerMobile:pl-5 largerMobile:text-start '>Logic <span className='font-migraLight largerMobile:block largerMobile:text-center largerMobile:pr-10 '>&</span> <span className='largerMobile:text-center largerMobile:block largerMobile:pl-16 largerMobile:-mt-7 '>Beauty</span></h1>
 
       </div>
     </div>

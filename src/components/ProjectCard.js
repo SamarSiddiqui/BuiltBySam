@@ -1,9 +1,36 @@
+import { useGSAP } from "@gsap/react";
 import React from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger)
+
 const ProjectCard = ({ title, description, projectImg, techImages,projectLink }) => {
+   const projectCard = document.querySelectorAll('.project-card')
+
+   useGSAP(()=>{
+    // projectCard.forEach((card)=>{
+
+    //   gsap.from(card,{
+    //     // y:-100,
+    //     opacity:0,
+    //     duration:1,
+    //     // scale:0,
+    //     scrollTrigger:{
+    //     trigger:card,
+    //     //  markers:true,
+    //      start:"top 60%",
+    //      end:"top 10%",
+    //      scrub:true
+    //     }
+    //   })
+    // })
+   })
+
   return (
     
     <div className="min-h-screen flex justify-center items-center  my-1">
-    <div className="w-[85%] rounded-2xl  shadow-[0_5px_10px_rgba(200,200,200,0.1)] relative cursor-pointer group proTablet:w-11/12 m-5">
+    <div className="project-card w-[85%] border  rounded-2xl  shadow-[0_5px_10px_rgba(200,200,200,0.1)] relative cursor-pointer group proTablet:w-11/12 m-5">
       {/* Image */}
       <div className="w-full h-full">
         <img
@@ -14,11 +41,10 @@ const ProjectCard = ({ title, description, projectImg, techImages,projectLink })
       </div>
   
       {/* Description */}
-      <div
-        className={`hidden group-hover:block rounded-2xl bg-custom-linear backdrop-blur-lg absolute h-full w-full top-0 
+      <div className={`hidden group-hover:block rounded-2xl bg-custom-linear backdrop-blur-lg absolute h-full w-full top-0 
         proTablet:relative proTablet:bottom-0 proTablet:h-auto proTablet:block proTablet:bg-black proTablet:backdrop-blur-none proTablet:rounded-b-2xl proTablet:rounded-t-none`}
       >
-        <div className="w-[85%]  m-auto h-full flex flex-col justify-between proTablet:w-full">
+        <div className="w-[85%]   m-auto h-full flex flex-col justify-between proTablet:w-full">
           {/* UpperSection */}
           <div className="p-5 h-full flex flex-col justify-between proTablet:p-0">
             <div className="p-1 proTablet:mx-7">

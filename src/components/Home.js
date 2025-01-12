@@ -57,7 +57,7 @@ const Home = () => {
       <BioSection/>
       {/* Marquee */}
       <div className="text-[clamp(50px,12vw,300px)] font-grandSlangItalic uppercase flex items-center mb-10">
-         <Marquee gradient={false} speed={150} className="" pauseOnHover={false}>
+         <Marquee gradient={false} speed={150} className="" pauseOnHover={true}>
          Projects <span>.</span> Projects .
          </Marquee>
       </div>
