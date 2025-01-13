@@ -13,13 +13,13 @@ const VisualImpact = () => {
     gsap.from('.heading-right',{
       //  rotateX:200,
      opacity:0,
-     x:100,
+     x:50,
      //  ease:"power3.out",
      duration:1,
      scrollTrigger:{
       trigger:'.heading-right',
       // markers:true,
-      start:"top 60%",
+      start:"top 80%",
       // end:"top 50%",
       scrub:true
     }
@@ -31,8 +31,8 @@ const VisualImpact = () => {
      scrollTrigger:{
        trigger:'.heading-left',
       //  markers:true,
-       start:"top 80%",
-       end:"top 50%",
+       start:"top 70%",
+       end:"top 30%",
        scrub:true
       }
     })
@@ -103,7 +103,7 @@ const VisualImpact = () => {
       </div>
          
          
-      <h1 className='last-heading text-[clamp(60px,10vw,200px)] pl-10 text-center largerMobile:pl-5 largerMobile:text-start '>Logic <span className='font-migraLight largerMobile:block largerMobile:text-center largerMobile:pr-10 '>&</span> <span className='largerMobile:text-center largerMobile:block largerMobile:pl-16 largerMobile:-mt-7 '>Beauty</span></h1>
+      <h1 className='last-heading text-[clamp(60px,10vw,200px)] pl-10 text-center largerMobile:pl-5 largerMobile:text-start '>Logic <span className='font-migraLight largerMobile:block largerMobile:text-center largerMobile:pr-10 '>&</span> <span className='largerMobile:text-center largerMobile:block largerMobile:pl-16 largerMobile:-mt-7'>Beauty</span></h1>
 
       </div>
     </div>

@@ -49,7 +49,7 @@ const Home = () => {
    <div className=" relative overflow-x-hidden">  
       <Loader onComplete={handleLoaderComplete} setLoaderAnimation={setLoaderAnimation}/>
       <HeroSection/>
-
+      
       { loaderAnimation &&
       <>
       <AboutPreview />
@@ -58,7 +58,7 @@ const Home = () => {
       {/* Marquee */}
       <div className="text-[clamp(50px,12vw,300px)] font-grandSlangItalic uppercase flex items-center mb-10">
          <Marquee gradient={false} speed={150} className="" pauseOnHover={true}>
-         Projects <span>.</span> Projects .
+         Projects&nbsp;.&nbsp;Projects&nbsp;.
          </Marquee>
       </div>
      

@@ -2,17 +2,15 @@ import { useGSAP } from '@gsap/react'
 import React, { useRef } from 'react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
-
+// import { useFlowerFalling } from '../utils/useFlowerFalling'
+import flowers from '../assets/svg/flower1.svg'
 gsap.registerPlugin(ScrollTrigger)
 
 const HeroSection = ({ref}) => {
-  //  const container = useRef()
-  // const headingAnimatingLeft = useRef()
-  // const headingAnimatingRight = useRef()
-
+  // useFlowerFalling('.heading','.flowers')
   useGSAP(()=>{
     gsap.utils.toArray(".heading").forEach((heading,index)=>{
-      gsap.fromTo(heading,{x:index%2===0?100:-100},{
+      gsap.fromTo(heading,{x:index%2===0?30:-100},{
         x:0,
         scrollTrigger:{
           trigger:heading,
@@ -24,9 +22,12 @@ const HeroSection = ({ref}) => {
       })
 
     })
+
+
+   
   },[])
 
-
+  
 
 
   return (
@@ -35,9 +36,12 @@ const HeroSection = ({ref}) => {
       <div className=" my-5 hero-heading opacity-0">
        <h2 className=" uppercase font-planeBold leading-[2] text-[clamp(10px,2.5vw,14px)] font-bold  ">Front-End Developer |  Crafting Interfaces</h2>
       </div>
-      <div className="hero-heading opacity-0">
-       <h1 className="uppercase text-[clamp(55px,11vw,180px)]  font-grandSlangRoman leading-[0.9] largerMobile:leading-[1.1]">Building</h1>
+      {/* First heading */}
+      <div className="hero-heading  cont relative overflow-hidden  opacity-0 text-center  ">
+       <h1 className="heading border text-center w-full   uppercase text-[clamp(55px,11vw,180px)]  font-grandSlangRoman leading-[0.9] largerMobile:leading-[1.1]">Building</h1>
+       <div class="flowers absolute z-[999] top-0 left-0 w-full h-full pointer-events-none"></div>
       </div>
+      {/* second heading */}
       <div className='hero-heading heading mt-2 opacity-0'>
        <h1 className="uppercase text-[clamp(60px,11vw,200px)] font-grandSlangRoman leading-[0.8] largerMobile:leading-[0.8]">Delightful </h1>
       </div>

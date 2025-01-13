@@ -18,6 +18,7 @@ const Cursor = ()=>{
         document.addEventListener('mouseleave',()=>{
             gsap.to(cursor,{
                 opacity:0
+            
             })
         })
     

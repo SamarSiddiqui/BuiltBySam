@@ -1,4 +1,4 @@
-import React, { use, useRef } from 'react'
+import React, {useRef } from 'react'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import ScrollTrigger from 'gsap/ScrollTrigger'
@@ -11,80 +11,91 @@ useMagneticEffect('.button-box','.contact-btn')
 useMultipleMagneticEffect('.footer-icon-box','.footer-icon')
  
   const scopeContainer = useRef()
-  // useGSAP(()=>{
-  //     const btnBox = document.querySelector('.button-box')
+  useGSAP(()=>{
+    gsap.from('.heading-right',{
+      rotateX:-90,
+      rotateY:50,
+      opacity:0,
+      duration:2,
+      scrollTrigger:{
+       trigger:".heading-right",
+      //  markers:true,
+       start:"top 80%",
+       end:"top 20%",
+      //  scrub:true
+      }
+   })
+    //HeadingAnimations
+    gsap.from('.heading-right',{
+       x:-30,
+       duration:2,
+       scrollTrigger:{
+        trigger:".heading-right",
+        // markers:true,
+        start:"top 90%",
+        end:"top 20%",
+        scrub:true
+       }
+    })   
 
-
-  //   const btn = document.querySelector(".contact-btn")
-
-  //   btnBox.addEventListener('mousemove',(e)=>{
-  //     const btnRect = btn.getBoundingClientRect()
-  //     const offsetX = (e.clientX-(btnRect.left+btnRect.width/2))*0.9
-  //     const offsetY = (e.clientY-(btnRect.top+btnRect.height/2))*0.9
-
-  //     gsap.to(btn,{
-  //       x:offsetX,
-  //       y:offsetY,
-  //       duration:0.3,
-  //       ease:"power3.out"
-  //     })
-
-  //   })
-    
-  //   btnBox.addEventListener("mouseleave", ()=>{
-  //     gsap.to(btn,{
-  //       x:0,
-  //       y:0,
-  //       duration:0.5
-  //     })
-  //   })
-
-  //   //HeadingAnimations
-  //   gsap.from('.heading-right',{
-  //      x:-30,
-  //     //  opacity:0,
-  //      duration:2,
-  //     //  ease:"power4.in",
-  //      scrollTrigger:{
-  //       trigger:".heading-right",
-  //       // markers:true,
-  //       start:"top 90%",
-  //       end:"top 20%",
-  //       scrub:true
-  //      }
-  //   })   
-
-  //   gsap.from('.heading-left',{
-  //     x:60,
-  //     opacity:0,
-  //     duration:2,
-  //    //  ease:"power4.in",
-  //     scrollTrigger:{
-  //      trigger:".heading-left",
-  //     //  markers:true,
-  //      start:"top 90%",
-  //      end:"top 20%",
-  //      scrub:true
-  //     }
+    gsap.from('.heading-left',{
+      x:60,
+      opacity:0,
+      duration:2,
+     //  ease:"power4.in",
+      scrollTrigger:{
+       trigger:".heading-left",
+      //  markers:true,
+       start:"top 90%",
+       end:"top 20%",
+       scrub:true
+      }
       
-  //  }) 
+   }) 
 
-  //   gsap.to('.btn-anim',{
-  //     y:-30,
-  // //  rotate:360,
-  //  ease:"power1.out",
-  //  duration:5,
-  //     scrollTrigger:{
-  //      trigger:".btn-anim",
-  //     //  markers:true,
-  //      start:"top bottom",
-  //      // end:"top 20%",
-  //      scrub:true
-  //     }
+   gsap.from(".middle-heading",{
+    rotateX:-90,
+      rotateY:-30,
+      opacity:0,
+      duration:2,
+      scrollTrigger:{
+       trigger:".middle-heading",
+      //  markers:true,
+       start:"top 80%",
+       end:"top 20%",
+      //  scrub:true
+      }
+   })
+   gsap.from(".heading-left",{
+    rotateX:-90,
+      rotateY:-30,
+      opacity:0,
+      duration:2,
+      scrollTrigger:{
+       trigger:".heading-left",
+      //  markers:true,
+       start:"top 80%",
+       end:"top 60%",
+      //  scrub:true
+      }
+   })
 
-  //  })   
+    gsap.to('.btn-anim',{
+      y:-30,
+  //  rotate:360,
+   ease:"power1.out",
+   duration:5,
+      scrollTrigger:{
+       trigger:".btn-anim",
+      //  markers: true,
+       start:"top bottom",
+       // end:"top 20%",
+       scrub:true
+      }
 
-  // },{scope:scopeContainer})
+   })   
+
+  },{scope:scopeContainer})
 
   return (
     <div ref={scopeContainer} className='min-h-screen flex flex-col'>
@@ -98,7 +109,7 @@ useMultipleMagneticEffect('.footer-icon-box','.footer-icon')
           </div>
           {/* second-line */}
           <div className='text-[clamp(70px,15vw,200px)] leading-[1] '>
-            <h1 className=' largerMobile:leading-[1.1]'>MEANINGFUL</h1>
+            <h1 className='middle-heading largerMobile:leading-[1.1]'>MEANINGFUL</h1>
           </div>
           {/* thrid-line */}
           <div className=' heading-left flex items-center'>
