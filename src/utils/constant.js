@@ -32,7 +32,7 @@ export const projectData = [
         techStack:[html,css,javascript,json],
         links:{
             liveLink:"https://samarsiddiqui.github.io/Spotify/",
-            sourceLink:"https://samarsiddiqui.github.io/Spotify/"
+            sourceLink:"https://github.com/SamarSiddiqui/Spotify"
         }
     },
     {
@@ -62,3 +62,11 @@ export const projectData = [
 export const hardSkills = ['Html5','Css3','JavaScript','React','Gsap','Tailwind Css','Redux','Context API','Postman','Jest','GitHub','Firebase','Canva','Photoshop','& more']
 
 export const softSkills = ['Passion for Problems','Empathy','Adaptability','Team Working','Collabration','Commuinication','Curiosity','Detailed Oreinted','Time Management','Leadership']
+
+
+export const handleDownload = ()=>{
+    const link = document.createElement('a')
+    link.href = `${process.env.PUBLIC_URL}/resume.pdf`
+    link.download =  `Samar's Resume.pdf`
+    link.click()
+}

@@ -38,10 +38,10 @@ const Home = () => {
 
  const starAnimation = ()=> {
   gsap.to('.star-img',{
-   y:-110,
+   y:-150,
    rotate:360,
    ease:"power1.out",
-   duration:1.5
+   duration:1.3
   })
  }
 

@@ -13,6 +13,9 @@
 body{
     background-color: #1e2125;
     color: #e9dfce;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 }
 
 /* Plane Text */
@@ -97,11 +100,3 @@ body{
     background: #c27c45;
 }
 
-.flower-svg {
-    position: absolute;
-    /* width: 50px; Default size, can be adjusted */
-    z-index: 999;
-    /* border: 2px solid red; */
-    pointer-events: none;
-  }
-  

@@ -1,36 +1,43 @@
 import { useGSAP } from "@gsap/react";
-import React from "react";
+import React, { useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { useMultipleMagneticEffect } from "../hooks/useMagneticEffect";
 
 gsap.registerPlugin(ScrollTrigger)
 
 const ProjectCard = ({ title, description, projectImg, techImages,projectLink }) => {
-   const projectCard = document.querySelectorAll('.project-card')
-
-   useGSAP(()=>{
-    // projectCard.forEach((card)=>{
-
-    //   gsap.from(card,{
-    //     // y:-100,
-    //     opacity:0,
-    //     duration:1,
-    //     // scale:0,
-    //     scrollTrigger:{
-    //     trigger:card,
-    //     //  markers:true,
-    //      start:"top 60%",
-    //      end:"top 10%",
-    //      scrub:true
-    //     }
-    //   })
-    // })
-   })
+  useMultipleMagneticEffect('.button-container','.button')
+   const cardRef = useRef(null)
+   useGSAP(() => {
+    const card = cardRef.current; 
+    if (card) {
+      gsap.fromTo(
+        card,
+        {
+          opacity: 0,
+          y: 100,
+        },
+        {
+          opacity: 1,
+          y: 0, 
+          duration: 1.5,
+          scrollTrigger: {
+            trigger: card, 
+            start: "top 70%", 
+            end: "top 40%", 
+            // markers: true, 
+            scrub: true, 
+          },
+        }
+      );
+    }
+  });
 
   return (
     
     <div className="min-h-screen flex justify-center items-center  my-1">
-    <div className="project-card w-[85%] border  rounded-2xl  shadow-[0_5px_10px_rgba(200,200,200,0.1)] relative cursor-pointer group proTablet:w-11/12 m-5">
+    <div ref={cardRef} className="project-card w-[85%]  rounded-2xl  shadow-[0_5px_10px_rgba(200,200,200,0.1)] relative cursor-pointer group proTablet:w-11/12 m-5">
       {/* Image */}
       <div className="w-full h-full">
         <img
@@ -70,23 +77,29 @@ const ProjectCard = ({ title, description, projectImg, techImages,projectLink })
                 ))}
               </div>
   
-              <div className="proTablet:my-5 ">
-              <a href={projectLink?.sourceLink} 
+              <div className="proTablet:my-5 flex ">
+                <div className="button-container">
+                <a href={projectLink?.sourceLink} 
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
-                  <button className="text-lg bg-gray-200/100 text-black py-2 px-5 mx-3 rounded-3xl proTablet:px-3 proTablet:text-sm">
+                  <button className="button text-lg bg-gray-200/100 text-black py-2 px-5 mx-3 rounded-3xl proTablet:px-3 proTablet:text-sm">
                     View Source
                   </button>
                 </a>
+                </div>
+                <div className="button-container">
                 <a href={projectLink?.liveLink}
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
-                    <button className="text-lg bg-gray-200/100 text-black py-2 px-5 mx-3 rounded-3xl proTablet:px-3 proTablet:text-sm">
+                    <button className="button text-lg bg-gray-200/100 text-black py-2 px-5 mx-3 rounded-3xl proTablet:px-3 proTablet:text-sm">
                     See It Live
                     </button>
                   </a>
+                </div>
+              
+                
               </div>
             </div>
           </div>

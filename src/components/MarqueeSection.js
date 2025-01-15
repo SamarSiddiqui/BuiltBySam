@@ -37,7 +37,7 @@ const MarqueeSection = () => {
   });
 
   return (
-    <div className="overflow-hidden min-h-[60vh] flex flex-col justify-center">
+    <div className="overflow-hidden  flex flex-col justify-center">
       <Marquee
         className="text-[clamp(20px,5vw,70px)] my-1 font-grandSlangRoman"
         gradient={false}

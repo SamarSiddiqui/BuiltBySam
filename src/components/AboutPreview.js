@@ -34,8 +34,8 @@ const AboutPreview = () => {
       trigger:'.profile-img',
       scroller:'body',
       // markers:true,
-      // start:"top 80%",
-      end:"top 0% ",
+      start:"top 80%",
+      end:"top 20% ",
       scrub:true
     }   
    })
@@ -51,7 +51,7 @@ const AboutPreview = () => {
       trigger:'.about-intro',
       scroller:'body',
       // markers:true,
-      start:"top 70%",
+      start:"top 90%",
       end:"top 30% ",
       scrub:true
     }
@@ -71,7 +71,7 @@ const AboutPreview = () => {
       ease:"power3.out",
       scrollTrigger:{
         trigger:para,
-        start:"top 90%",
+        start:"top 100%",
         end:"top 80%",
         scrub:true,
         // markers:true
@@ -84,7 +84,7 @@ const AboutPreview = () => {
     <div className="min-h-[120vh] flex flex-col">
          {/* starImage */}
          <div className="w-full h-44 flex justify-center items-end smallerTab:items-center p-5">
-         <img  className="star-img h-14 smallerTab:h-10" src={Star_Svg} alt="star_svg"/>
+         <img  className="star-img h-12 smallerTab:h-10" src={Star_Svg} alt="star_svg"/>
          </div>
          {/* AboutME */}
          <div className=" flex-1 flex ">

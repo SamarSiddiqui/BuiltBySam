@@ -2,7 +2,7 @@ import './App.css';
 import { Outlet } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Cursor from './components/Cursor';
-import useLenis from "./utils/useLenis";
+import useLenis from "./hooks/useLenis";
 
 
 function App() {

@@ -51,15 +51,14 @@ const VisualImpact = () => {
       }
     })
     gsap.from('.down-arrow',{
-      //  rotateX:200,
-      //  opacity:0,
+       opacity:0,
        rotate:90,
        transformOrigin:"10% 20% ",
        scrollTrigger:{
          trigger:'.down-arrow',
-         // markers:true,
-         start:"top 80%",
-         // end:"top ",
+        //  markers:true,
+         start:"top 75%",
+         end:"top 50%",
          scrub:true
         }
       })
@@ -79,6 +78,7 @@ const VisualImpact = () => {
     trigger:".word",
     // markers:true,
     start:"top 90%",
+    end:"top 55%",
     scrub:true
   }
 })

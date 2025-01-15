@@ -33,7 +33,7 @@ inspiringTexts.forEach(inspiringText=>{
       opacity:0,
       // duration:2,
       stagger:0.2,
-    // x:100,
+      // y:100,
     scrollTrigger:{
       trigger:".inspiring-text",
       // markers:true,

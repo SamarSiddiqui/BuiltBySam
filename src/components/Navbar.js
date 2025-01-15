@@ -1,10 +1,12 @@
 import { useGSAP } from '@gsap/react'
 import SVG from '../assets/svg/star.svg'
 import gsap from 'gsap';
-import { useMultipleMagneticEffect} from '../utils/useMagneticEffect';
+import { useMagneticEffect, useMultipleMagneticEffect} from '../hooks/useMagneticEffect';
 
 const Navbar = ()=>{
-
+//  Logo Effect   
+useMagneticEffect('.logo-container','.logo')
+//  Icons Effect   
 useMultipleMagneticEffect('.header-icon-box','.header-icon')
 
 useGSAP(()=>{
@@ -14,11 +16,14 @@ useGSAP(()=>{
     return (
         <div className=" h-20 w-screen  flex  items-center fixed z-[999]">
             <div className="w-[94%]   m-auto  h-16 flex items-center justify-between">
-               <div className="font-planeLight text-[clamp(15px,2.5vw,16px)]">
+               <div className="logo-container p-2 font-planeLight text-[clamp(15px,2.5vw,16px)]">
+                <div className='logo'>
+
                 <h1 className="">SAMAR</h1>
                 <div className=' flex items-center -mt-2.5 '>
                 <img src={SVG} className='logo-img h-4 w-auto' alt="svg"/>
                  <h1 className=''>SIDDIQUI</h1>
+                </div>
                 </div>
                </div> 
 

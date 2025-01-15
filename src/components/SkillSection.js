@@ -25,14 +25,14 @@ const SkillSection = ()=> {
       gsap.from('.skills',{
         y:100,
         opacity:0,
-        scale:0.5,
+        scale:0.6,
         duration:1,
         scrollTrigger:{
           trigger:'.skills',
           start:"top 90%",
-          end:"top 30%",
+          end:"top 50%",
           // markers:true,
-          // scrub:true
+          scrub:true
         }
       })
       

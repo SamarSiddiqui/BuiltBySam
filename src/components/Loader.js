@@ -12,7 +12,7 @@ const Loader = ({onComplete,setLoaderAnimation}) => {
     })
     tl.to(loader.current,{
       yPercent:-100,
-      ease:"power2.in",
+      ease:"power4.in",
       duration:1,
       borderRadius:'100%',
       onComplete: ()=> setLoaderAnimation(true)

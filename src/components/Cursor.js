@@ -26,7 +26,7 @@ const Cursor = ()=>{
     },[])
 
     return (
-        <div id="cursor" className="w-5 h-5 rounded-full bg-[rgba(233,233,206,0.8)] fixed z-[9999] top-0 left-0 transform: translate(-50%, -50%); pointer-events-none mix-blend-difference opacity-0"></div> 
+        <div id="cursor" className="w-5 h-5 rounded-full bg-[rgba(233,233,206,0.8)] fixed z-[9999] top-0 left-0 transform: translate(-50%, -50%); pointer-events-none mix-blend-difference opacity-0 proTablet:w-0 proTablet:cursor-pointer"></div> 
     )
 }
 
