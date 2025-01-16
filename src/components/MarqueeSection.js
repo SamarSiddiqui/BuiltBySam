@@ -23,14 +23,13 @@ const MarqueeSection = () => {
         markers: false,
         onUpdate:(self)=>{
           const direction = self.direction
-          if(direction===1){
-            setMarqueeDirection('left')
-            setMarqueeDirection2('right')
-                 
-        } else{
+          if(direction===-1){
           setMarqueeDirection('right')
           setMarqueeDirection2('left')
-        }
+         } else{
+          setMarqueeDirection('left')
+          setMarqueeDirection2('right')
+         }
       },
       },
     });
@@ -69,3 +68,4 @@ const MarqueeSection = () => {
 };
 
 export default MarqueeSection;
+

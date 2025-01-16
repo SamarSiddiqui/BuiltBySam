@@ -6,8 +6,7 @@
 *{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
-    
+    box-sizing: border-box;    
 }
 
 body{
@@ -21,63 +20,74 @@ body{
 /* Plane Text */
 @font-face {
     font-family: 'PlaneLight';
-    src: url('./fonts/PlaneLight.woff2');
+    src: url('./assets/fonts/PlaneLight.woff2');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 @font-face {
     font-family: 'PlaneBold';
-    src: url('./fonts/PlaneBold.woff2');
+    src: url('./assets/fonts/PlaneBold.woff2');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 @font-face {
     font-family: 'PlaneItalic';
-    src: url('./fonts/PlaneItalic.woff2');
+    src: url('./assets/fonts/PlaneItalic.woff2');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 /* Cursive Text */
 @font-face {
     font-family: 'GrandSlangBold';
-    src: url('./fonts/GrandSlang-Bold.woff ');
+    src: url('./assets/fonts/GrandSlang-Bold.woff ');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 @font-face {
     font-family: 'GrandSlangItalic';
-    src: url('./fonts/GrandSlang-Italic.woff');
+    src: url('./assets/fonts/GrandSlang-Italic.woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 @font-face {
     font-family: 'GrandSlangRoman';
-    src: url('./fonts/GrandSlang-Roman.woff');
+    src: url('./assets/fonts/GrandSlang-Roman.woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 /* Migra Text */
-
 @font-face {
     font-family: 'MigraLightItalic';
-    src: url('./fonts/Migra-ExtralightItalic.woff');
+    src: url('./assets/fonts/Migra-ExtralightItalic.woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 @font-face {
     font-family: 'MigraBold';
-    src: url('./fonts/Migra-ExtraboldItalic.woff');
+    src: url('./assets/fonts/Migra-ExtraboldItalic.woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 @font-face {
     font-family: 'MigraLight';
-    src: url('./fonts/Migra-Extralight.woff');
+    src: url('./assets/fonts/Migra-Extralight.woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
+
+/* Customized Scrollbar */
+
 /* width */ 
 ::-webkit-scrollbar {
     width: 6px;
