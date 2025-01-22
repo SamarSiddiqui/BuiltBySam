@@ -54,7 +54,7 @@ export const projectData = [
         techStack:[html,css,javascript],
         links:{
             liveLink:"https://samarsiddiqui.github.io/Venom-Trail/",
-            sourceLink:"https://samarsiddiqui.github.io/Venom-Trail/" 
+            sourceLink:"https://github.com/SamarSiddiqui/Venom-Trail" 
         }
     },
 ] 
