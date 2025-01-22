@@ -33,8 +33,7 @@ const Contact = () => {
       duration: 2,
       scrollTrigger: {
         trigger: '.heading-right',
-        start: 'top 80%',
-        end: 'top 20%',
+        start: 'top 40%',
         scrub: true,
       },
     });
@@ -45,7 +44,7 @@ const Contact = () => {
       duration: 2,
       scrollTrigger: {
         trigger: '.heading-left',
-        start: 'top 90%',
+        start: 'top 70%',
         end: 'top 50%',
         scrub: true,
       },

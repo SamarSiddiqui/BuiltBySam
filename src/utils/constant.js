@@ -53,8 +53,8 @@ export const projectData = [
         description:"Step into the world of classic gaming with my dynamic Snake game! Built with advanced DOM manipulation and JavaScript, it features a growing snake, collision detection, and engaging sound effects. Enjoy an immersive experience with seamless gameplay mechanics and intuitive controls that keep the fun alive. 🐍🎮✨",
         techStack:[html,css,javascript],
         links:{
-            liveLink:"https://samarsiddiqui.github.io/Neon-Snake/",
-            sourceLink:"https://github.com/SamarSiddiqui/Neon-Snake" 
+            liveLink:"https://samarsiddiqui.github.io/Venom-Trail/",
+            sourceLink:"https://samarsiddiqui.github.io/Venom-Trail/" 
         }
     },
 ] 
