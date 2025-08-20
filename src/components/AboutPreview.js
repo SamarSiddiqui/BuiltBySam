@@ -46,6 +46,7 @@ const AboutPreview = () => {
         scroller: 'body',
         start: 'top 90%',
         end: 'top 30%',
+        // markers:true,
         scrub: true,
       },
     });
