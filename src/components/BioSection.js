@@ -79,15 +79,10 @@ const BioSection = () => {
       <div className="w-1/2 flex flex-1 items-center pt-20 justify-center largerMobile:w-full largerMobile:h-1/2">
         <div className="h-1/2 w-2/3 proTablet:w-[90%] font-planeBold text-[clamp(10px,2vw,18px)] largerMobile:text-lg my-5">
           <p className="break-words mb-5 inspiring-text">
-            I live in Lucknow, India — a city rich in culture and history. My
-            journey into programming sparked during the last year of my college,
-            where curiosity and logic led me to explore the art of coding.
+            I live in Lucknow, India — a city steeped in culture and history. My coding journey sparked in the final year of college, when curiosity and logic pulled me into the world of programming and never let go.
           </p>
           <p className="inspiring-text">
-            Driven by a passion for understanding how things work behind the
-            scenes, I found my calling in front-end development. My goal is
-            simple yet profound: to make the internet a more beautiful,
-            functional, and engaging place for everyone.
+            Today, as a full stack developer, I thrive on understanding systems from the inside out — building complete digital solutions that feel seamless and scale effortlessly. My goal remains simple: to make the internet more beautiful, functional, and engaging for everyone.
           </p>
         </div>
       </div>

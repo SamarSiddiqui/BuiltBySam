@@ -34,7 +34,7 @@ const HeroSection = ({ sectionRef }) => {
       <div className="smallerTab:mb-12 smallerTab:mt-0 mt-10 w-full h-full text-center">
         <div className="my-5 hero-heading opacity-0">
           <h2 className="uppercase font-planeBold leading-[2] text-[clamp(10px,2.5vw,14px)] font-bold">
-            Front-End Developer | Crafting Interfaces
+            Full Stack Developer | From Pixels to Production
           </h2>
           {/* ShapesContainer */}
           <div className="shapes absolute z-[999] top-0 left-0 w-full h-full pointer-events-none"></div>

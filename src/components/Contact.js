@@ -11,6 +11,7 @@ const Contact = () => {
   useMagneticEffect('.contact-container', '.contact-btn');
   useMagneticEffect('.resume-container', '.resume-btn');
   useMultipleMagneticEffect('.footer-icon-container', '.footer-icon');
+  const year = new Date().getFullYear();
 
   const scopeContainer = useRef();
 
@@ -141,7 +142,7 @@ const Contact = () => {
         </div>
 
         {/* Footer */}
-        <div className="text-center text-sm mb-1 text-white">Samar Siddiqui 2025 🖤</div>
+        <div className="text-center text-sm mb-1 text-white">Samar Siddiqui {year} 🖤</div>
       </div>
     </div>
   );
