@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import HeroSection from "./HeroSection";
 import AboutPreview from "./AboutPreview";
 import BioSection from "./BioSection";
+import CertificationsSection from "./CertificationsSection";
 import ProjectsPreview from "./ProjectsPreview";
 import VisualImpact from "./VisualImpact";
 import Marquee from "react-fast-marquee";
@@ -54,6 +55,7 @@ const Home = () => {
           <AboutPreview />
           <VisualImpact />
           <BioSection />
+          <CertificationsSection />
           {/* Marquee */}
           <div className="text-[clamp(50px,12vw,300px)] font-grandSlangItalic uppercase flex items-center mb-10">
             <Marquee
@@ -76,3 +78,4 @@ const Home = () => {
 };
 
 export default Home;
+
