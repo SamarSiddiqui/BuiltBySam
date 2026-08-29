@@ -101,38 +101,25 @@ const AboutPreview = () => {
           <div className="about-intro opacity-0 font-migraLight w-1/2 h-full text-[clamp(18px,2.5vw,19px)] smallerTab:w-full smallerTab:flex smallerTab:justify-center smallerTab:h-auto">
             <div className="mt-16 w-[55%] proTablet:w-[90%] smallerTab:px-5 tracking-wider break-words">
               <p className="about-section my-1">
-                Nice to <span className="font-migraLightItalic">meet you</span>{' '}
-                all.
+                Nice to <span className="font-migraLightItalic">meet you.</span>{' '}
               </p>
-              <p className="about-section leading-5">
-                Welcome to my creative corner of the web. I'm Samar Siddiqui, a
-                passionate and self-taught front-end developer with a knack for
-                crafting engaging digital experiences. Whether it's breathing
-                life into static designs or experimenting with new tools and
-                technologies, I'm always excited to turn ideas into reality.
+              <p className="about-section leading-6">
+                Welcome to my corner of the web. I’m Samar Siddiqui, a passionate self-taught full stack developer who builds complete digital experiences from pixel to production. I craft smooth interfaces with React, Next.js, and GSAP while designing scalable backends in Golang or Node.js.
               </p>
-              <p className="about-section leading-5 mt-2">
+              <p className="about-section leading-6 mt-2">
                 I hold a{' '}
                 <span className="font-migraLightItalic">B.Tech</span> degree
                 from{' '}
                 <span className="font-migraLightItalic">
                   Aligarh Muslim University
                 </span>
-                , where my journey into the tech world began. Initially drawn by
-                curiosity and a love for problem-solving, I've steadily honed my
-                skills in front-end development. From exploring HTML and CSS
-                basics to diving deep into advanced frameworks, my path has been
-                fueled by a mix of determination and endless learning.
+                , where my journey into tech began. What started as curiosity and problem-solving has grown into a full stack skill set focused on architecting scalable end-to-end solutions.
               </p>
-              <p className="about-section leading-5 my-2">
-                As a budding front-end developer, I've focused on creating
-                responsive, visually appealing, and user-friendly interfaces. My
-                projects reflect my commitment to clean code, attention to
-                detail, and a seamless user experience.
+              <p className="about-section leading-6 my-2">
+                As a full stack developer, I focus on creating responsive, high-performance applications with clean architecture and maintainable code. My projects emphasize seamless user experiences and systems designed to scale gracefully.
               </p>
-              <p className="about-section leading-5 mt-3 mb-3">
-                I'd love the opportunity to collaborate and bring your vision to
-                life. Let's connect and create something amazing together!
+              <p className="about-section leading-6 mt-3 mb-3">
+                I’d love the opportunity to collaborate and bring your vision to life — from elegant front-end interactions to solid, scalable back-end architecture. Let’s connect and build something amazing together!
               </p>
             </div>
           </div>

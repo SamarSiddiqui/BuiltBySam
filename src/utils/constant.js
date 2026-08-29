@@ -59,9 +59,10 @@ export const projectData = [
     },
 ] 
 
-export const hardSkills = ['Next.js','React','Redux','GSAP','Context API', 'System Design','Tailwind CSS','JavaScript',`REST API's`,'Postman','Firebase','Github','Figma','Canva','& more']
+export const hardSkills = ['Next.js','React','TypeScript','Redux','GSAP','Node.js',
+  'Golang', 'System Design','MongoDB','Postman','Firebase','Git & Github','Figma','Docker','CI/CD & Deployment','& more']
 
-export const softSkills = ['Team Leadership','Passion for Problems','Empathy','Adaptability','Team Working','Collabration','Commuinication','Curiosity','Detailed Oreinted','Time Management','Code Reviews']
+export const softSkills = ['Team Collaboration','Ownership & Accountability','Problem Solving','Attention to Detail','Adaptability','Leadership in Small Teams','Commuinication','Curiosity & Continuous Learning','Time Management','Code Reviews']
 
 
 export const handleDownload = ()=>{
