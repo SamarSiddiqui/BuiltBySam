@@ -74,7 +74,8 @@ export const certificationData = [
     credentialUrl: "#",
     tags: ["React", "JavaScript", "CSS3", "Git"],
     badgeColor: "#0064E0",
-    badgeImg: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230b0f19'/><path d='M30 50 C30 35, 45 35, 50 48 C55 35, 70 35, 70 50 C70 65, 55 65, 50 52 C45 65, 30 65, 30 50 Z' fill='none' stroke='%230064E0' stroke-width='6'/></svg>"
+    badgeImg: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230b0f19'/><path d='M30 50 C30 35, 45 35, 50 48 C55 35, 70 35, 70 50 C70 65, 55 65, 50 52 C45 65, 30 65, 30 50 Z' fill='none' stroke='%230064E0' stroke-width='6'/></svg>",
+    certImg: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvTD-VQtaRBtrC-pUPKscnYcF2NqR860nmZY6C5JpcCg&s=10"
   },
   {
     id: "cert-2",
@@ -84,7 +85,8 @@ export const certificationData = [
     credentialUrl: "#",
     tags: ["HTML5", "CSS Grid", "Flexbox", "Accessibility"],
     badgeColor: "#0A0A23",
-    badgeImg: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230b0f19'/><path d='M40 30 L25 50 L40 70 M60 30 L75 50 L60 70' stroke='%23F5C518' stroke-width='6' stroke-linecap='round' stroke-linejoin='round' fill='none'/></svg>"
+    badgeImg: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230b0f19'/><path d='M40 30 L25 50 L40 70 M60 30 L75 50 L60 70' stroke='%23F5C518' stroke-width='6' stroke-linecap='round' stroke-linejoin='round' fill='none'/></svg>",
+    certImg: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvTD-VQtaRBtrC-pUPKscnYcF2NqR860nmZY6C5JpcCg&s=10"
   },
   {
     id: "cert-3",
@@ -94,7 +96,8 @@ export const certificationData = [
     credentialUrl: "#",
     tags: ["React 19", "Redux Toolkit", "State Management"],
     badgeColor: "#61DAFB",
-    badgeImg: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230b0f19'/><ellipse cx='50' cy='50' rx='30' ry='12' fill='none' stroke='%2361DAFB' stroke-width='4' transform='rotate(30 50 50)'/><ellipse cx='50' cy='50' rx='30' ry='12' fill='none' stroke='%2361DAFB' stroke-width='4' transform='rotate(90 50 50)'/><ellipse cx='50' cy='50' rx='30' ry='12' fill='none' stroke='%2361DAFB' stroke-width='4' transform='rotate(150 50 50)'/><circle cx='50' cy='50' r='5' fill='%2361DAFB'/></svg>"
+    badgeImg: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230b0f19'/><ellipse cx='50' cy='50' rx='30' ry='12' fill='none' stroke='%2361DAFB' stroke-width='4' transform='rotate(30 50 50)'/><ellipse cx='50' cy='50' rx='30' ry='12' fill='none' stroke='%2361DAFB' stroke-width='4' transform='rotate(90 50 50)'/><ellipse cx='50' cy='50' rx='30' ry='12' fill='none' stroke='%2361DAFB' stroke-width='4' transform='rotate(150 50 50)'/><circle cx='50' cy='50' r='5' fill='%2361DAFB'/></svg>",
+    certImg: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvTD-VQtaRBtrC-pUPKscnYcF2NqR860nmZY6C5JpcCg&s=10"
   },
   {
     id: "cert-4",
@@ -104,7 +107,8 @@ export const certificationData = [
     credentialUrl: "#",
     tags: ["UI/UX", "Figma", "User Research", "Prototyping"],
     badgeColor: "#4285F4",
-    badgeImg: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230b0f19'/><circle cx='50' cy='50' r='25' fill='none' stroke='%23EA4335' stroke-width='6'/><path d='M50 25 A25 25 0 0 1 75 50 L50 50 Z' fill='%234285F4'/><circle cx='50' cy='50' r='10' fill='%230b0f19'/></svg>"
+    badgeImg: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230b0f19'/><circle cx='50' cy='50' r='25' fill='none' stroke='%23EA4335' stroke-width='6'/><path d='M50 25 A25 25 0 0 1 75 50 L50 50 Z' fill='%234285F4'/><circle cx='50' cy='50' r='10' fill='%230b0f19'/></svg>",
+    certImg: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvTD-VQtaRBtrC-pUPKscnYcF2NqR860nmZY6C5JpcCg&s=10"
   }
 ];
 

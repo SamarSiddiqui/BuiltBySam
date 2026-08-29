@@ -55,17 +55,17 @@ const CertificationsSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="min-h-screen py-24 px-6 max-w-7xl mx-auto relative text-custom-vanila overflow-hidden"
+      className="min-h-screen py-24 relative text-custom-vanila overflow-hidden w-full"
     >
-      {/* Background Parallax Marquee Text */}
+      {/* Background Parallax Marquee Text - Full Viewport Width */}
       <div className="absolute top-1/4 left-0 w-full pointer-events-none opacity-5 z-0 select-none overflow-hidden">
         <h1 className="cert-bg-marquee font-grandSlangItalic text-[clamp(100px,22vw,320px)] whitespace-nowrap leading-none uppercase">
-          CERTIFICATIONS &nbsp;&bull;&nbsp; RECOGNITION &nbsp;&bull;&nbsp; CERTIFICATIONS &nbsp;&bull;&nbsp;
+          CERTIFICATIONS &nbsp;&bull;&nbsp; RECOGNITION &nbsp;&bull;&nbsp; CERTIFICATIONS &nbsp;&bull;&nbsp; RECOGNITION &nbsp;&bull;&nbsp;
         </h1>
       </div>
 
-      {/* 2-Column Responsive Layout */}
-      <div className="relative z-10 flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
+      {/* 2-Column Responsive Layout - Contrained Container */}
+      <div className="max-w-7xl mx-auto px-6 relative z-10 flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
         
         {/* Left Sticky Column */}
         <div className="cert-left-heading lg:w-5/12 lg:sticky lg:top-28 self-start">
@@ -124,6 +124,17 @@ const CertificationsSection = () => {
                   <h3 className="text-xl font-grandSlangRoman mb-3 text-gray-100 group-hover:text-custom-vanila transition-colors leading-snug">
                     {cert.title}
                   </h3>
+
+                  {/* Certificate Image Preview */}
+                  {cert.certImg && (
+                    <div className="my-4 rounded-xl overflow-hidden border border-neutral-800/80 bg-black/40 group-hover:border-[#d2b99f]/30 transition-all duration-300">
+                      <img
+                        src={cert.certImg}
+                        alt={cert.title}
+                        className="w-full h-36 object-cover object-center group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100"
+                      />
+                    </div>
+                  )}
                 </div>
 
                 {/* Bottom Tags & Verification Link */}
