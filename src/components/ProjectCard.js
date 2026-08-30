@@ -39,6 +39,31 @@ const ProjectCard = ({ project, index }) => {
     { scope: cardRef }
   );
 
+  // Mouse tilt physics handlers
+  const handleMouseMove = (e) => {
+    const card = e.currentTarget;
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+
+    gsap.to(card, {
+      rotateY: (x / rect.width) * 10,
+      rotateX: -(y / rect.height) * 10,
+      transformPerspective: 1000,
+      ease: "power1.out",
+      duration: 0.4,
+    });
+  };
+
+  const handleMouseLeave = (e) => {
+    gsap.to(e.currentTarget, {
+      rotateY: 0,
+      rotateX: 0,
+      ease: "power2.out",
+      duration: 0.6,
+    });
+  };
+
   const { title, category, year, role, description, projectImg, techStack, techNames, links } = project;
 
   return (
@@ -48,8 +73,12 @@ const ProjectCard = ({ project, index }) => {
         isEven ? "lg:flex-row" : "lg:flex-row-reverse"
       }`}
     >
-      {/* Image Block (Asymmetric Placement) */}
-      <div className="w-full lg:w-7/12 group relative rounded-2xl overflow-hidden border border-neutral-800/80 bg-neutral-900/80 backdrop-blur-md shadow-2xl transition-all duration-500 hover:border-[#d2b99f]/50 hover:shadow-[0_25px_60px_-15px_rgba(210,185,159,0.2)]">
+      {/* Image Block with GSAP 3D Tilt & Micro-Interactions */}
+      <div
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+        className="w-full lg:w-7/12 group relative rounded-2xl overflow-hidden border border-neutral-800/80 bg-neutral-900/80 backdrop-blur-md shadow-2xl transition-all duration-500 hover:border-[#d2b99f]/50 hover:shadow-[0_25px_60px_-15px_rgba(210,185,159,0.2)] cursor-pointer"
+      >
         <div className="relative aspect-[16/10] w-full overflow-hidden">
           <img
             src={projectImg}
@@ -63,6 +92,14 @@ const ProjectCard = ({ project, index }) => {
           <div className="absolute top-4 left-4 z-10 flex items-center gap-2">
             <span className="px-3 py-1 rounded-full bg-black/70 backdrop-blur-md border border-neutral-700/80 text-[11px] font-mono text-[#d2b99f]">
               {year} &bull; {category}
+            </span>
+          </div>
+
+          {/* Hover Overlay Hint */}
+          <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none z-20">
+            <span className="px-5 py-2.5 rounded-full bg-black/80 border border-[#d2b99f]/40 text-custom-vanila text-xs font-planeBold tracking-wider uppercase shadow-2xl transform translate-y-3 group-hover:translate-y-0 transition-transform flex items-center gap-2">
+              <span>EXPLORE PROJECT</span>
+              <span className="text-sm">↗</span>
             </span>
           </div>
         </div>
@@ -82,7 +119,7 @@ const ProjectCard = ({ project, index }) => {
           </div>
 
           {/* Overlapping Serif Title */}
-          <h2 className="text-[clamp(32px,4vw,54px)] font-grandSlangRoman font-bold leading-[1.1] text-gray-100 mb-4 hover:text-[#d2b99f] transition-colors">
+          <h2 className="text-[clamp(32px,4vw,54px)] font-grandSlangRoman font-bold leading-[1.1] text-gray-100 mb-4 hover:text-[#d2b99f] transition-colors cursor-pointer">
             {title}
           </h2>
 
@@ -97,7 +134,7 @@ const ProjectCard = ({ project, index }) => {
               techNames.map((name, idx) => (
                 <span
                   key={idx}
-                  className="text-xs font-planeLight px-3 py-1 rounded-lg bg-neutral-900/80 text-gray-300 border border-neutral-800/80"
+                  className="text-xs font-planeLight px-3 py-1 rounded-lg bg-neutral-900/90 text-gray-300 border border-neutral-800/80 hover:border-[#d2b99f]/40 hover:text-custom-vanila hover:scale-105 transition-all duration-300 cursor-default"
                 >
                   {name}
                 </span>
@@ -106,7 +143,7 @@ const ProjectCard = ({ project, index }) => {
               techStack?.map((img, idx) => (
                 <div
                   key={idx}
-                  className="inline-flex items-center justify-center bg-neutral-900/80 border border-neutral-800 p-1.5 rounded-xl"
+                  className="inline-flex items-center justify-center bg-neutral-900/80 border border-neutral-800 p-1.5 rounded-xl hover:border-[#d2b99f]/40 transition-colors"
                 >
                   <img src={img} className="h-5 object-contain" alt={`Tech icon ${idx}`} />
                 </div>
