@@ -76,7 +76,7 @@ const CertificationsSection = () => {
 
       {/* 2-Column Responsive Layout */}
       <div className="max-w-7xl mx-auto px-6 relative z-10 flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
-        
+
         {/* Left Sticky Column */}
         <div className="cert-left-heading lg:w-5/12 lg:sticky lg:top-28 self-start">
           <div className="flex items-center gap-2 mb-3">
@@ -118,8 +118,7 @@ const CertificationsSection = () => {
                 {/* Subtle Hover Inspection Overlay */}
                 <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px] opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <span className="px-4 py-2 rounded-full bg-black/80 border border-[#d2b99f]/40 text-custom-vanila text-xs font-planeBold flex items-center gap-2 shadow-2xl transform translate-y-2 group-hover/img:translate-y-0 transition-transform">
-                    <span>Inspect Certificate</span>
-                    <span className="text-sm">🔍</span>
+                    <span>Inspect</span>
                   </span>
                 </div>
               </div>

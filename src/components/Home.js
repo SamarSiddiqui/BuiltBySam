@@ -54,8 +54,8 @@ const Home = () => {
         <>
           <AboutPreview />
           <VisualImpact />
-          <BioSection />
           <CertificationsSection />
+          <BioSection />
           {/* Marquee */}
           <div className="text-[clamp(50px,12vw,300px)] font-grandSlangItalic uppercase flex items-center mb-10">
             <Marquee
