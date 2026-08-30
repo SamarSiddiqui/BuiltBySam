@@ -1,3 +1,4 @@
+import sproutlyImg from '../assets/Projects/sproutlyBg.avif'
 import projectImg1 from '../assets/Projects/netflixBg.png'
 import projectImg2 from '../assets/Projects/spotifyBg.png'
 import projectImg3 from '../assets/Projects/appleBg.png'
@@ -13,8 +14,32 @@ import api from '../assets/tech-icons/api.png'
 import json from '../assets/tech-icons/json.webp'
 import claudeCertImg from '../assets/certifications/claude_certification.jpg'
 import helsinkiCertImg from '../assets/certifications/certificate-elements-of-ai.png'
+import fccBackendCertImg from '../assets/certifications/backend_freecode_certificate.avif'
 
 export const projectData = [
+  {
+    id: "sproutly",
+    title: "Sproutly",
+    category: "AI Botany & Plant Care Ecosystem",
+    year: "2024",
+    role: "Full-Stack Architecture & AI Systems",
+    projectImg: sproutlyImg,
+    description: "Sproutly is an intelligent digital greenhouse companion designed to eliminate urban plant parent burnout. Built with Next.js 14, Supabase, real-time weather telemetry, and OpenAI, it converts static watering calendars into dynamic, weather-aware care routines. 🌿✨",
+    overview: "As an engineer passionate about botany and modern web architecture, I built Sproutly to solve a common real-world problem: static plant tracking apps fail to account for weather shifts or species-specific nuances. Sproutly acts as an automated digital greenhouse dashboard. It monitors real-time geographical weather data to trigger smart 'Rain Delay' watering skips, provides natural language AI search across plant collections, and structures user data safely with Supabase Row Level Security.",
+    highlights: [
+      "Proactive AI Care Advisor analyzing seasonal & species telemetry",
+      "Weather-aware automation triggering 'Rain Delay' skips on high precipitation",
+      "Natural language AI collection search & conversational query filtering",
+      "Supabase PostgreSQL database secured with Row Level Security (RLS)",
+      "TanStack Query client caching & Recharts environmental analytics"
+    ],
+    techStack: [react, tailwind, api, json],
+    techNames: ["Next.js 14", "Supabase (PostgreSQL)", "GSAP", "OpenAI API"],
+    links: {
+      liveLink: "https://sproutly-vert.vercel.app/",
+      sourceLink: "https://github.com/SamarSiddiqui/Sproutly"
+    }
+  },
   {
     id: "project1",
     title: "Netflix-GPT",
@@ -105,8 +130,7 @@ export const projectData = [
   },
 ]
 
-export const hardSkills = ['Next.js', 'React', 'TypeScript', 'Redux', 'GSAP', 'Node.js',
-  'Golang', 'System Design', 'MongoDB', 'Postman', 'Firebase', 'Git & Github', 'Figma', 'Docker', 'CI/CD & Deployment', '& more']
+export const hardSkills = ['Next.js', 'Node.js', 'Golang', 'RAG', 'TypeScript', 'Redux', 'GSAP', 'System Design', 'MongoDB', 'Supabase', 'Git & Github', 'Figma', 'Docker', 'CI/CD & Deployment', '& more']
 
 export const softSkills = ['Team Collaboration', 'Ownership & Accountability', 'Problem Solving', 'Attention to Detail', 'Adaptability', 'Leadership in Small Teams', 'Commuinication', 'Curiosity & Continuous Learning', 'Time Management', 'Code Reviews']
 
@@ -129,6 +153,15 @@ export const certificationData = [
     credentialUrl: "https://certificates.mooc.fi/validate/esgaa9lkzrm",
     tags: ["Artificial Intelligence", "Machine Learning", "Neural Networks", "Data Science"],
     certImg: helsinkiCertImg
+  },
+  {
+    id: "cert-3",
+    title: "Back End Development and APIs",
+    issuer: "freeCodeCamp",
+    date: "2026",
+    credentialUrl: "https://freecodecamp.org/certification/samarsiddiqui/back-end-development-and-apis-v9",
+    tags: ["Node.js", "Express", "MongoDB", "Mongoose", "REST APIs"],
+    certImg: fccBackendCertImg
   }
 ];
 
