@@ -1,5 +1,6 @@
 import { useGSAP } from "@gsap/react";
 import React, { useRef } from "react";
+import { Link } from "react-router-dom";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useMultipleMagneticEffect } from "../hooks/useMagneticEffect";
@@ -64,7 +65,7 @@ const ProjectCard = ({ project, index }) => {
     });
   };
 
-  const { title, category, year, role, description, projectImg, techStack, techNames, links } = project;
+  const { id, title, category, year, role, description, projectImg, techStack, techNames, links } = project;
 
   return (
     <div
@@ -74,10 +75,11 @@ const ProjectCard = ({ project, index }) => {
       }`}
     >
       {/* Image Block with GSAP 3D Tilt & Micro-Interactions */}
-      <div
+      <Link
+        to={`/projects/${id}`}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
-        className="w-full lg:w-7/12 group relative rounded-2xl overflow-hidden border border-neutral-800/80 bg-neutral-900/80 backdrop-blur-md shadow-2xl transition-all duration-500 hover:border-[#d2b99f]/50 hover:shadow-[0_25px_60px_-15px_rgba(210,185,159,0.2)] cursor-pointer"
+        className="w-full lg:w-7/12 group relative rounded-2xl overflow-hidden border border-neutral-800/80 bg-neutral-900/80 backdrop-blur-md shadow-2xl transition-all duration-500 hover:border-[#d2b99f]/50 hover:shadow-[0_25px_60px_-15px_rgba(210,185,159,0.2)] cursor-pointer block"
       >
         <div className="relative aspect-[16/10] w-full overflow-hidden">
           <img
@@ -98,12 +100,12 @@ const ProjectCard = ({ project, index }) => {
           {/* Hover Overlay Hint */}
           <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none z-20">
             <span className="px-5 py-2.5 rounded-full bg-black/80 border border-[#d2b99f]/40 text-custom-vanila text-xs font-planeBold tracking-wider uppercase shadow-2xl transform translate-y-3 group-hover:translate-y-0 transition-transform flex items-center gap-2">
-              <span>EXPLORE PROJECT</span>
+              <span>EXPLORE CASE STUDY</span>
               <span className="text-sm">↗</span>
             </span>
           </div>
         </div>
-      </div>
+      </Link>
 
       {/* Typography & Details Block */}
       <div className="w-full lg:w-5/12 flex flex-col justify-between py-2 text-custom-vanila">
@@ -118,10 +120,12 @@ const ProjectCard = ({ project, index }) => {
             </span>
           </div>
 
-          {/* Overlapping Serif Title */}
-          <h2 className="text-[clamp(32px,4vw,54px)] font-grandSlangRoman font-bold leading-[1.1] text-gray-100 mb-4 hover:text-[#d2b99f] transition-colors cursor-pointer">
-            {title}
-          </h2>
+          {/* Overlapping Serif Title Link */}
+          <Link to={`/projects/${id}`}>
+            <h2 className="text-[clamp(32px,4vw,54px)] font-grandSlangRoman font-bold leading-[1.1] text-gray-100 mb-4 hover:text-[#d2b99f] transition-colors cursor-pointer">
+              {title}
+            </h2>
+          </Link>
 
           {/* Description */}
           <p className="text-[#d2b99f]/85 font-planeItalic text-sm lg:text-base leading-relaxed mb-6">

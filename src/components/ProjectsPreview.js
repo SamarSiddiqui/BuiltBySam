@@ -1,7 +1,6 @@
-import React from 'react'
-import {projectData} from '../utils/constant'
-import ProjectCard from './ProjectCard'
-
+import React from "react";
+import { projectData } from "../utils/constant";
+import ProjectCard from "./ProjectCard";
 
 const ProjectsPreview = () => {
   if (!projectData || projectData.length === 0) {
@@ -13,16 +12,19 @@ const ProjectsPreview = () => {
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-6 py-16 flex flex-col gap-20 lg:gap-32">
-      {projectData.map((project, index) => (
-        <ProjectCard
-          key={project.id}
-          index={index}
-          project={project}
-        />
-      ))}
-    </div>
+    <section className="relative w-full py-12">
+      {/* Project Cards Stack */}
+      <div className="max-w-7xl mx-auto px-6 relative z-10 flex flex-col gap-24 lg:gap-36">
+        {projectData.map((project, index) => (
+          <ProjectCard
+            key={project.id}
+            index={index}
+            project={project}
+          />
+        ))}
+      </div>
+    </section>
   );
 };
 
-export default ProjectsPreview
+export default ProjectsPreview;
