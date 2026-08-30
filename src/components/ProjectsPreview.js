@@ -4,7 +4,6 @@ import ProjectCard from './ProjectCard'
 
 
 const ProjectsPreview = () => {
-
   if (!projectData || projectData.length === 0) {
     return (
       <div className="flex justify-center items-center h-screen text-lg text-gray-500">
@@ -14,19 +13,16 @@ const ProjectsPreview = () => {
   }
 
   return (
-    <div>
-      {
-        projectData.map((card)=>(
-          <ProjectCard key={card.id}
-              title={card.title}
-              description={card.description}
-              projectImg={card.projectImg}
-              techImages={card.techStack}
-              projectLink={card.links}/>
-        ))
-      }
+    <div className="max-w-7xl mx-auto px-6 py-16 flex flex-col gap-20 lg:gap-32">
+      {projectData.map((project, index) => (
+        <ProjectCard
+          key={project.id}
+          index={index}
+          project={project}
+        />
+      ))}
     </div>
-  )
-}
+  );
+};
 
 export default ProjectsPreview

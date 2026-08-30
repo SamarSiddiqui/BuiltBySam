@@ -6,110 +6,146 @@ import { useMultipleMagneticEffect } from "../hooks/useMagneticEffect";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const ProjectCard = ({ title, description, projectImg, techImages, projectLink }) => {
+const ProjectCard = ({ project, index }) => {
   const cardRef = useRef(null);
+  const isEven = index % 2 === 0;
+  const projectNumber = String(index + 1).padStart(2, "0");
 
   // Apply Magnetic Effect to buttons
   useMultipleMagneticEffect(".button-container", ".button");
 
   // GSAP Scroll Animation for Card
-  useGSAP(() => {
-    const card = cardRef.current;
-    if (card) {
-       gsap.fromTo(
-        card,
-        { opacity: 0, y: 100 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 1.5,
-          scrollTrigger: {
-            trigger: card,
-            start: "top 70%",
-            end: "top 40%",
-            scrub: true,
-          },
-        }
-      )
-    }
-  }, []);
+  useGSAP(
+    () => {
+      const card = cardRef.current;
+      if (card) {
+        gsap.fromTo(
+          card,
+          { opacity: 0, y: 80 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1.2,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: card,
+              start: "top 85%",
+              toggleActions: "play none none reverse",
+            },
+          }
+        );
+      }
+    },
+    { scope: cardRef }
+  );
+
+  const { title, category, year, role, description, projectImg, techStack, techNames, links } = project;
 
   return (
-    <div className="min-h-screen flex justify-center items-center my-6">
-      <div
-        ref={cardRef}
-        className="project-card w-[85%] rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.3)] border border-[#d2b99f]/10 relative cursor-pointer group proTablet:w-11/12 m-5 overflow-hidden transition-all duration-500 hover:border-[#d2b99f]/25"
-      >
-        {/* Image Container with Zoom effect */}
-        <div className="w-full h-full overflow-hidden rounded-2xl proTablet:rounded-b-none">
+    <div
+      ref={cardRef}
+      className={`project-card relative w-full flex flex-col items-center gap-8 lg:gap-14 ${
+        isEven ? "lg:flex-row" : "lg:flex-row-reverse"
+      }`}
+    >
+      {/* Image Block (Asymmetric Placement) */}
+      <div className="w-full lg:w-7/12 group relative rounded-2xl overflow-hidden border border-neutral-800/80 bg-neutral-900/80 backdrop-blur-md shadow-2xl transition-all duration-500 hover:border-[#d2b99f]/50 hover:shadow-[0_25px_60px_-15px_rgba(210,185,159,0.2)]">
+        <div className="relative aspect-[16/10] w-full overflow-hidden">
           <img
             src={projectImg}
-            alt={`${title} project`}
-            className="w-full h-full object-cover rounded-2xl proTablet:rounded-t-2xl proTablet:rounded-b-none group-hover:scale-[1.03] transition-transform duration-700 ease-out"
+            alt={`${title} preview`}
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
           />
+          {/* Subtle Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
+          
+          {/* Top Badge Overlay */}
+          <div className="absolute top-4 left-4 z-10 flex items-center gap-2">
+            <span className="px-3 py-1 rounded-full bg-black/70 backdrop-blur-md border border-neutral-700/80 text-[11px] font-mono text-[#d2b99f]">
+              {year} &bull; {category}
+            </span>
+          </div>
+        </div>
+      </div>
+
+      {/* Typography & Details Block */}
+      <div className="w-full lg:w-5/12 flex flex-col justify-between py-2 text-custom-vanila">
+        <div>
+          {/* Index & Role Badge */}
+          <div className="flex items-center gap-3 mb-3">
+            <span className="text-sm font-mono text-[#d2b99f] font-bold">
+              {projectNumber} //
+            </span>
+            <span className="text-xs uppercase tracking-widest text-gray-400 font-planeBold">
+              {role || category}
+            </span>
+          </div>
+
+          {/* Overlapping Serif Title */}
+          <h2 className="text-[clamp(32px,4vw,54px)] font-grandSlangRoman font-bold leading-[1.1] text-gray-100 mb-4 hover:text-[#d2b99f] transition-colors">
+            {title}
+          </h2>
+
+          {/* Description */}
+          <p className="text-[#d2b99f]/85 font-planeItalic text-sm lg:text-base leading-relaxed mb-6">
+            {description}
+          </p>
+
+          {/* Tech Stack Badges */}
+          <div className="flex flex-wrap items-center gap-2 mb-8">
+            {techNames ? (
+              techNames.map((name, idx) => (
+                <span
+                  key={idx}
+                  className="text-xs font-planeLight px-3 py-1 rounded-lg bg-neutral-900/80 text-gray-300 border border-neutral-800/80"
+                >
+                  {name}
+                </span>
+              ))
+            ) : (
+              techStack?.map((img, idx) => (
+                <div
+                  key={idx}
+                  className="inline-flex items-center justify-center bg-neutral-900/80 border border-neutral-800 p-1.5 rounded-xl"
+                >
+                  <img src={img} className="h-5 object-contain" alt={`Tech icon ${idx}`} />
+                </div>
+              ))
+            )}
+          </div>
         </div>
 
-        {/* Description overlay */}
-        <div
-          className={`hidden group-hover:flex rounded-2xl bg-gradient-to-br from-neutral-950/90 via-[#1e2125]/92 to-neutral-950/96 backdrop-blur-md absolute h-full w-full top-0 left-0 flex-col justify-center items-center border border-[#d2b99f]/15 transition-all duration-300
-          proTablet:relative proTablet:bottom-0 proTablet:h-auto proTablet:flex proTablet:bg-[#1a1c1e] proTablet:backdrop-blur-none proTablet:rounded-b-2xl proTablet:rounded-t-none proTablet:border-0`}
-        >
-          <div className="w-[85%] m-auto h-[90%] flex flex-col justify-between proTablet:w-full proTablet:h-auto">
-            {/* Content Area */}
-            <div className="p-5 h-full flex flex-col justify-between proTablet:p-6">
-              <div className="p-1">
-                <h1 className="text-[clamp(26px,3.8vw,56px)] font-grandSlangBold font-bold text-[#e9dfce] tracking-wide mb-3 proTablet:mb-2">
-                  {title}
-                </h1>
-                <p className="text-[clamp(14px,1.4vw,20px)] text-[#d2b99f]/85 w-11/12 leading-[1.8] font-planeItalic proTablet:leading-7 proTablet:w-full my-2">
-                  {description}
-                </p>
-              </div>
-
-              {/* Bottom Section */}
-              <div className="flex justify-between items-center py-4 border-t border-[#d2b99f]/10 mt-6 proTablet:mt-4 proTablet:flex-col proTablet:items-start proTablet:gap-4">
-                {/* Tech Icons with custom containers */}
-                <div className="flex flex-wrap items-center gap-2">
-                  {techImages?.map((image, index) => (
-                    <div 
-                      className="inline-flex items-center justify-center bg-neutral-900/60 border border-[#d2b99f]/10 p-1.5 rounded-xl transition-all duration-300 hover:scale-110 hover:border-[#d2b99f]/30 hover:bg-neutral-800/80 shadow-sm" 
-                      key={index}
-                    >
-                      <img src={image} className="h-6 object-contain" alt={`Tech icon ${index + 1}`} />
-                    </div>
-                  ))}
-                </div>
-
-                {/* Buttons (Primary vs Secondary styling) */}
-                <div className="flex items-center gap-3 proTablet:w-full proTablet:justify-end">
-                  <div className="button-container">
-                    <a
-                      href={projectLink?.sourceLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="View Source Code"
-                    >
-                      <button className="button font-planeBold text-sm tracking-wider uppercase border border-[#d2b99f]/40 text-[#e9dfce] bg-transparent py-2.5 px-6 rounded-full hover:bg-[#d2b99f] hover:text-[#1e2125] hover:border-[#d2b99f] transition-all duration-300 shadow-md hover:shadow-lg proTablet:px-4 proTablet:text-xs">
-                        View Source
-                      </button>
-                    </a>
-                  </div>
-                  <div className="button-container">
-                    <a
-                      href={projectLink?.liveLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="See Live Project"
-                    >
-                      <button className="button font-planeBold text-sm tracking-wider uppercase bg-[#c27c45] text-[#f6f3ef] border border-[#c27c45] py-2.5 px-6 rounded-full hover:bg-transparent hover:text-[#c27c45] transition-all duration-300 shadow-md hover:shadow-lg proTablet:px-4 proTablet:text-xs">
-                        See It Live
-                      </button>
-                    </a>
-                  </div>
-                </div>
-              </div>
+        {/* CTA Action Buttons */}
+        <div className="flex flex-wrap items-center gap-4 pt-2 border-t border-neutral-800/80">
+          {links?.liveLink && (
+            <div className="button-container">
+              <a
+                href={links.liveLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`See ${title} Live`}
+              >
+                <button className="button font-planeBold text-xs uppercase tracking-wider bg-[#c27c45] text-[#f6f3ef] border border-[#c27c45] py-2.5 px-6 rounded-full hover:bg-transparent hover:text-[#c27c45] transition-all duration-300 shadow-md">
+                  See It Live ↗
+                </button>
+              </a>
             </div>
-          </div>
+          )}
+
+          {links?.sourceLink && (
+            <div className="button-container">
+              <a
+                href={links.sourceLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`View ${title} Source Code`}
+              >
+                <button className="button font-planeBold text-xs uppercase tracking-wider border border-neutral-700 text-[#e9dfce] bg-transparent py-2.5 px-6 rounded-full hover:bg-[#d2b99f] hover:text-black hover:border-[#d2b99f] transition-all duration-300">
+                  Source Code ↗
+                </button>
+              </a>
+            </div>
+          )}
         </div>
       </div>
     </div>
