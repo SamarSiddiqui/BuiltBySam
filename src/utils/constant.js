@@ -72,7 +72,7 @@ export const certificationData = [
     id: "cert-1",
     title: "Claude Certified",
     issuer: "Anthropic / Skilljar",
-    date: "2024",
+    date: "2026",
     credentialUrl: "https://verify.skilljar.com/c/ahuj7rrragse",
     tags: ["Claude", "Prompt Engineering", "LLMs", "AI Integration"],
     certImg: claudeCertImg
@@ -81,7 +81,7 @@ export const certificationData = [
     id: "cert-2",
     title: "Elements of AI",
     issuer: "University of Helsinki & Reaktor",
-    date: "2024",
+    date: "2026",
     credentialUrl: "https://certificates.mooc.fi/validate/esgaa9lkzrm",
     tags: ["Artificial Intelligence", "Machine Learning", "Neural Networks", "Data Science"],
     certImg: helsinkiCertImg
