@@ -11,7 +11,8 @@ import css from '../assets/tech-icons/css.png'
 import html from '../assets/tech-icons/html.png'
 import api from '../assets/tech-icons/api.png'
 import json from '../assets/tech-icons/json.webp'
-import certPlaceholderImg from '../assets/certifications/claude_certification.jpg'
+import claudeCertImg from '../assets/certifications/claude_certification.jpg'
+import helsinkiCertImg from '../assets/certifications/certificate-elements-of-ai.png'
 
 export const projectData = [
   {
@@ -69,47 +70,21 @@ export const softSkills = ['Team Collaboration', 'Ownership & Accountability', '
 export const certificationData = [
   {
     id: "cert-1",
-    title: "Meta Front-End Developer",
-    issuer: "Meta / Coursera",
+    title: "Claude Certified",
+    issuer: "Anthropic / Skilljar",
     date: "2024",
-    credentialUrl: "#",
-    tags: ["React", "JavaScript", "CSS3", "Git"],
-    badgeColor: "#0064E0",
-    badgeImg: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230b0f19'/><path d='M30 50 C30 35, 45 35, 50 48 C55 35, 70 35, 70 50 C70 65, 55 65, 50 52 C45 65, 30 65, 30 50 Z' fill='none' stroke='%230064E0' stroke-width='6'/></svg>",
-    certImg: certPlaceholderImg
+    credentialUrl: "https://verify.skilljar.com/c/ahuj7rrragse",
+    tags: ["Claude", "Prompt Engineering", "LLMs", "AI Integration"],
+    certImg: claudeCertImg
   },
   {
     id: "cert-2",
-    title: "Responsive Web Design",
-    issuer: "freeCodeCamp",
-    date: "2023",
-    credentialUrl: "#",
-    tags: ["HTML5", "CSS Grid", "Flexbox", "Accessibility"],
-    badgeColor: "#0A0A23",
-    badgeImg: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230b0f19'/><path d='M40 30 L25 50 L40 70 M60 30 L75 50 L60 70' stroke='%23F5C518' stroke-width='6' stroke-linecap='round' stroke-linejoin='round' fill='none'/></svg>",
-    certImg: certPlaceholderImg
-  },
-  {
-    id: "cert-3",
-    title: "Advanced React & Redux",
-    issuer: "Frontend Masters",
+    title: "Elements of AI",
+    issuer: "University of Helsinki & Reaktor",
     date: "2024",
-    credentialUrl: "#",
-    tags: ["React 19", "Redux Toolkit", "State Management"],
-    badgeColor: "#61DAFB",
-    badgeImg: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230b0f19'/><ellipse cx='50' cy='50' rx='30' ry='12' fill='none' stroke='%2361DAFB' stroke-width='4' transform='rotate(30 50 50)'/><ellipse cx='50' cy='50' rx='30' ry='12' fill='none' stroke='%2361DAFB' stroke-width='4' transform='rotate(90 50 50)'/><ellipse cx='50' cy='50' rx='30' ry='12' fill='none' stroke='%2361DAFB' stroke-width='4' transform='rotate(150 50 50)'/><circle cx='50' cy='50' r='5' fill='%2361DAFB'/></svg>",
-    certImg: certPlaceholderImg
-  },
-  {
-    id: "cert-4",
-    title: "Google UX Design Specialization",
-    issuer: "Google",
-    date: "2023",
-    credentialUrl: "#",
-    tags: ["UI/UX", "Figma", "User Research", "Prototyping"],
-    badgeColor: "#4285F4",
-    badgeImg: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230b0f19'/><circle cx='50' cy='50' r='25' fill='none' stroke='%23EA4335' stroke-width='6'/><path d='M50 25 A25 25 0 0 1 75 50 L50 50 Z' fill='%234285F4'/><circle cx='50' cy='50' r='10' fill='%230b0f19'/></svg>",
-    certImg: certPlaceholderImg
+    credentialUrl: "https://certificates.mooc.fi/validate/esgaa9lkzrm",
+    tags: ["Artificial Intelligence", "Machine Learning", "Neural Networks", "Data Science"],
+    certImg: helsinkiCertImg
   }
 ];
 

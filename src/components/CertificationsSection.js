@@ -107,12 +107,12 @@ const CertificationsSection = () => {
               <div
                 key={cert.id}
                 onClick={() => setSelectedCert(cert)}
-                className={`cert-card-container group/img relative rounded-2xl overflow-hidden cursor-pointer border border-neutral-800/80 bg-neutral-900 shadow-2xl transition-all duration-500 ease-out origin-center hover:rotate-0 hover:scale-[1.05] hover:z-20 hover:border-[#d2b99f]/60 hover:shadow-[0_25px_60px_-15px_rgba(210,185,159,0.25)] ${tiltClass}`}
+                className={`cert-card-container group/img relative rounded-2xl overflow-hidden cursor-pointer border border-neutral-800/80 shadow-2xl transition-all duration-500 ease-out origin-center hover:rotate-0 hover:scale-[1.05] hover:z-20 hover:border-[#d2b99f]/60 hover:shadow-[0_25px_60px_-15px_rgba(210,185,159,0.25)] ${tiltClass}`}
               >
                 <img
                   src={cert.certImg}
                   alt={cert.title || "Certificate"}
-                  className="w-full h-auto object-cover group-hover/img:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover block group-hover/img:scale-105 transition-transform duration-500 rounded-2xl"
                 />
 
                 {/* Subtle Hover Inspection Overlay */}
@@ -158,13 +158,31 @@ const CertificationsSection = () => {
             </div>
 
             {/* Certificate Image View */}
-            <div className="max-h-[70vh] overflow-auto rounded-xl border border-neutral-800 bg-black flex items-center justify-center">
+            <div className="max-h-[65vh] overflow-auto rounded-xl border border-neutral-800 bg-black flex items-center justify-center">
               <img
                 src={selectedCert.certImg}
                 alt={selectedCert.title}
-                className="w-full h-auto object-contain max-h-[65vh]"
+                className="w-full h-auto object-contain max-h-[60vh]"
               />
             </div>
+
+            {/* Modal Footer Link */}
+            {selectedCert.credentialUrl && (
+              <div className="pt-2 flex justify-between items-center border-t border-neutral-800/80">
+                <span className="text-xs font-mono text-gray-400">
+                  ISSUED {selectedCert.date}
+                </span>
+                <a
+                  href={selectedCert.credentialUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-5 py-2 rounded-full bg-[#d2b99f] text-black text-xs font-planeBold hover:bg-white transition-colors flex items-center gap-1.5"
+                >
+                  <span>Verify Official Credential</span>
+                  <span>↗</span>
+                </a>
+              </div>
+            )}
           </div>
         </div>
       )}
