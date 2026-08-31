@@ -1,9 +1,21 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { projectData } from "../utils/constant";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
+const CATEGORIES = [
+  { id: "All", label: "All Projects" },
+  { id: "AI", label: "AI & Intelligence" },
+  { id: "FullStack", label: "Full-Stack & Web" },
+  { id: "Interactive", label: "Audio & UI Clones" },
+  { id: "Games", label: "Arcade Games" },
+];
+
 const AllProjects = () => {
+  const [activeCategory, setActiveCategory] = useState("All");
+  const [searchQuery, setSearchQuery] = useState("");
+
   // Scroll to top on mount
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -16,7 +28,37 @@ const AllProjects = () => {
       { opacity: 0, y: 40 },
       { opacity: 1, y: 0, duration: 1, ease: "power2.out" }
     );
+    gsap.fromTo(
+      ".archive-filter-bar",
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 1, delay: 0.2, ease: "power2.out" }
+    );
   }, []);
+
+  // Filter helper logic
+  const matchesCategory = (project, category) => {
+    if (category === "All") return true;
+    const catLower = project.category.toLowerCase();
+    const titleLower = project.title.toLowerCase();
+
+    if (category === "AI") {
+      return catLower.includes("ai") || titleLower.includes("gpt");
+    }
+    if (category === "FullStack") {
+      return catLower.includes("ecosystem") || catLower.includes("streaming") || catLower.includes("architecture");
+    }
+    if (category === "Interactive") {
+      return catLower.includes("audio") || catLower.includes("experience") || titleLower.includes("clone");
+    }
+    if (category === "Games") {
+      return catLower.includes("game") || catLower.includes("arcade");
+    }
+    return true;
+  };
+
+  const countCategory = (catId) => {
+    return projectData.filter((p) => matchesCategory(p, catId)).length;
+  };
 
   return (
     <main className="min-h-screen pt-28 pb-24 text-custom-vanila relative max-w-7xl mx-auto px-6">
@@ -36,7 +78,7 @@ const AllProjects = () => {
         <div className="flex items-center gap-2 mb-3">
           <span className="w-2 h-2 rounded-full bg-[#d2b99f] animate-pulse"></span>
           <span className="text-xs uppercase tracking-widest text-gray-400 font-planeBold">
-            COMPLETE ARCHIVE & EXPERIMENTS
+            COMPLETE ARCHIVE & EXPERIMENTS ({projectData.length})
           </span>
         </div>
 
@@ -47,6 +89,62 @@ const AllProjects = () => {
         <p className="text-[#d2b99f]/90 font-planeItalic text-base md:text-lg max-w-2xl leading-relaxed">
           A comprehensive collection of applications, AI ecosystem tools, full-stack systems, and web experiments engineered from pixel to production.
         </p>
+      </div>
+
+      {/* Interactive Controls Bar: Search & Category Filters */}
+      <div className="archive-filter-bar mb-16 flex flex-col md:flex-row md:items-center justify-between gap-6 pb-6 border-b border-neutral-800/80">
+        
+        {/* Category Filter Pills */}
+        <div className="flex flex-wrap items-center gap-2.5">
+          {CATEGORIES.map((cat) => {
+            const count = countCategory(cat.id);
+            const isActive = activeCategory === cat.id;
+
+            return (
+              <button
+                key={cat.id}
+                onClick={() => setActiveCategory(cat.id)}
+                className={`px-4 py-2 rounded-full text-xs font-planeBold tracking-wider transition-all duration-300 flex items-center gap-2 ${
+                  isActive
+                    ? "bg-[#d2b99f] text-black shadow-lg scale-105"
+                    : "bg-neutral-900/80 border border-neutral-800 text-gray-400 hover:border-[#d2b99f]/40 hover:text-custom-vanila"
+                }`}
+              >
+                <span>{cat.label}</span>
+                <span
+                  className={`px-2 py-0.5 rounded-full text-[10px] font-mono ${
+                    isActive ? "bg-black/20 text-black" : "bg-neutral-800 text-gray-400"
+                  }`}
+                >
+                  {count}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Real-time Search Input */}
+        <div className="relative w-full md:w-72">
+          <input
+            type="text"
+            placeholder="Search projects or tech..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="w-full bg-neutral-900/90 border border-neutral-800 rounded-full py-2.5 pl-10 pr-10 text-xs font-planeLight text-gray-200 placeholder-gray-500 focus:outline-none focus:border-[#d2b99f]/60 transition-colors"
+          />
+          <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-500 text-xs">
+            🔍
+          </span>
+          {searchQuery && (
+            <button
+              onClick={() => setSearchQuery("")}
+              className="absolute right-3.5 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white text-xs"
+            >
+              ✕
+            </button>
+          )}
+        </div>
+
       </div>
     </main>
   );
