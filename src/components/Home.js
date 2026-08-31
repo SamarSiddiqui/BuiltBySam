@@ -67,7 +67,7 @@ const Home = () => {
             </Marquee>
           </div>
 
-          <ProjectsPreview />
+          <ProjectsPreview limit={3} />
           <MarqueeSection />
           <SkillSection />
           <Contact />
