@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useGSAP } from "@gsap/react";
 import SVG from "../assets/svg/star.svg";
 import gsap from "gsap";
@@ -23,7 +24,7 @@ const Navbar = () => {
     <div className="h-20 w-screen flex items-center fixed z-[999]">
       <div className="w-[94%] m-auto h-16 flex items-center justify-between">
         {/* Logo Section */}
-        <div className="logo-container p-2 font-planeLight text-[clamp(15px,2.5vw,16px)]">
+        <Link to="/" className="logo-container p-2 font-planeLight text-[clamp(15px,2.5vw,16px)] cursor-pointer">
           <div className="logo">
             <h1 className="">SAMAR</h1>
             <div className="flex items-center -mt-2.5">
@@ -31,7 +32,7 @@ const Navbar = () => {
               <h1 className="">SIDDIQUI</h1>
             </div>
           </div>
-        </div>
+        </Link>
 
         {/* Social Icons */}
         <div className="text-black text-xl">
