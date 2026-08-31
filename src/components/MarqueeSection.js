@@ -10,44 +10,61 @@ const MarqueeSection = () => {
 
   useGSAP(
     () => {
-      // Top Marquee line (glides left on scroll down, reverses on scroll up)
-      gsap.to('.marquee-line-top', {
-        xPercent: -35,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: 'top bottom',
-          end: 'bottom top',
-          scrub: 0.8,
-        },
-      });
+      // Top Marquee line (glides right to left on scroll down)
+      gsap.fromTo(
+        '.marquee-line-top',
+        { xPercent: 5 },
+        {
+          xPercent: -25,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: 0.8,
+          },
+        }
+      );
 
-      // Middle Huge Marquee line (glides right on scroll down, reverses on scroll up)
-      gsap.to('.marquee-line-middle', {
-        xPercent: 25,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: 'top bottom',
-          end: 'bottom top',
-          scrub: 0.8,
-        },
-      });
+      // Middle Playground Marquee line (glides left to right on scroll down)
+      gsap.fromTo(
+        '.marquee-line-middle',
+        { xPercent: -25 },
+        {
+          xPercent: 5,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: 0.8,
+          },
+        }
+      );
 
-      // Bottom Marquee line (glides left on scroll down, reverses on scroll up)
-      gsap.to('.marquee-line-bottom', {
-        xPercent: -35,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: 'top bottom',
-          end: 'bottom top',
-          scrub: 0.8,
-        },
-      });
+      // Bottom Marquee line (glides right to left on scroll down)
+      gsap.fromTo(
+        '.marquee-line-bottom',
+        { xPercent: 5 },
+        {
+          xPercent: -25,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: 0.8,
+          },
+        }
+      );
     },
     { scope: containerRef }
   );
+
+  const topBottomText =
+    "Playing / Trying / Sleeping / Failing / Dreaming / Playing / Trying / Sleeping / Failing / Dreaming / Playing / Trying / Sleeping / Failing / Dreaming / Playing / Trying / Sleeping / Failing / Dreaming / ";
+
+  const middleText = Array(10).fill("MY PLAYGROUND \u00A0\u2022\u00A0 ").join("");
 
   return (
     <section
@@ -56,22 +73,22 @@ const MarqueeSection = () => {
     >
       {/* Top Marquee Line */}
       <div className="overflow-hidden whitespace-nowrap w-full my-1">
-        <div className="marquee-line-top text-[clamp(22px,4.5vw,260px)] font-grandSlangRoman whitespace-nowrap text-custom-vanila/85 inline-block">
-          Playing / Trying / Sleeping / Failing / Dreaming / Playing / Trying / Sleeping / Failing / Dreaming / Playing / Trying / Sleeping / Failing / Dreaming /
+        <div className="marquee-line-top text-[clamp(22px,4.5vw,100px)] font-grandSlangRoman whitespace-nowrap text-custom-vanila/85 inline-block">
+          {topBottomText}
         </div>
       </div>
 
-      {/* Middle Huge Playground Marquee */}
+      {/* Middle Playground Marquee */}
       <div className="overflow-hidden whitespace-nowrap w-full my-2">
-        <div className="marquee-line-middle text-[clamp(65px,14vw,100px)] font-grandSlangItalic whitespace-nowrap text-[#d2b99f] inline-block -ml-[30%] leading-none">
-          MY PLAYGROUND &nbsp;&bull;&nbsp; MY PLAYGROUND &nbsp;&bull;&nbsp; MY PLAYGROUND &nbsp;&bull;&nbsp; MY PLAYGROUND &nbsp;&bull;&nbsp;
+        <div className="marquee-line-middle text-[clamp(50px,10vw,140px)] font-grandSlangItalic whitespace-nowrap text-[#d2b99f] inline-block leading-none">
+          {middleText}
         </div>
       </div>
 
       {/* Bottom Marquee Line */}
       <div className="overflow-hidden whitespace-nowrap w-full my-1">
-        <div className="marquee-line-bottom text-[clamp(22px,4.5vw,64px)] font-grandSlangRoman whitespace-nowrap text-custom-vanila/85 inline-block">
-          Dreaming / Failing / Playing / Trying / Sleeping / Dreaming / Failing / Playing / Trying / Sleeping / Dreaming / Failing / Playing / Trying / Sleeping /
+        <div className="marquee-line-bottom text-[clamp(22px,4.5vw,100px)] font-grandSlangRoman whitespace-nowrap text-custom-vanila/85 inline-block">
+          {topBottomText}
         </div>
       </div>
     </section>
