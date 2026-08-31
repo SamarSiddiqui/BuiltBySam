@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { projectData } from "../utils/constant";
+import ProjectCard from "./ProjectCard";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
@@ -59,6 +60,22 @@ const AllProjects = () => {
   const countCategory = (catId) => {
     return projectData.filter((p) => matchesCategory(p, catId)).length;
   };
+
+  const filteredProjects = projectData.filter((project) => {
+    const matchesCat = matchesCategory(project, activeCategory);
+
+    if (!searchQuery.trim()) return matchesCat;
+
+    const query = searchQuery.toLowerCase();
+    const matchesQuery =
+      project.title.toLowerCase().includes(query) ||
+      project.category.toLowerCase().includes(query) ||
+      project.description.toLowerCase().includes(query) ||
+      (project.role && project.role.toLowerCase().includes(query)) ||
+      (project.techNames && project.techNames.some((t) => t.toLowerCase().includes(query)));
+
+    return matchesCat && matchesQuery;
+  });
 
   return (
     <main className="min-h-screen pt-28 pb-24 text-custom-vanila relative max-w-7xl mx-auto px-6">
@@ -146,6 +163,33 @@ const AllProjects = () => {
         </div>
 
       </div>
+
+      {/* Filtered Projects Stack Grid */}
+      {filteredProjects.length > 0 ? (
+        <div className="flex flex-col gap-24 lg:gap-36">
+          {filteredProjects.map((project, index) => (
+            <ProjectCard key={project.id} index={index} project={project} />
+          ))}
+        </div>
+      ) : (
+        /* Empty State */
+        <div className="text-center py-20 bg-neutral-900/40 border border-neutral-800 rounded-2xl p-8 max-w-xl mx-auto">
+          <span className="text-4xl mb-4 block">🔍</span>
+          <h3 className="text-xl font-grandSlangRoman text-[#d2b99f] mb-2">No Matching Projects Found</h3>
+          <p className="text-gray-400 text-sm font-planeLight mb-6">
+            No projects matched "{searchQuery}" under the selected category.
+          </p>
+          <button
+            onClick={() => {
+              setActiveCategory("All");
+              setSearchQuery("");
+            }}
+            className="px-6 py-2.5 rounded-full bg-[#d2b99f] text-black font-planeBold text-xs uppercase hover:bg-white transition-colors"
+          >
+            Reset Filters
+          </button>
+        </div>
+      )}
     </main>
   );
 };
