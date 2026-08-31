@@ -79,26 +79,36 @@ const ProjectCard = ({ project, index }) => {
         to={`/projects/${id}`}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
-        className="w-full lg:w-7/12 group relative rounded-2xl overflow-hidden border border-neutral-800/80 bg-neutral-900/80 backdrop-blur-md shadow-2xl transition-all duration-500 hover:border-[#d2b99f]/50 hover:shadow-[0_25px_60px_-15px_rgba(210,185,159,0.2)] cursor-pointer block"
+        className="w-full lg:w-7/12 group relative rounded-2xl overflow-hidden border border-neutral-800/80 bg-neutral-950 backdrop-blur-md shadow-2xl transition-all duration-500 hover:border-[#d2b99f]/50 hover:shadow-[0_25px_60px_-15px_rgba(210,185,159,0.2)] cursor-pointer block"
       >
-        <div className="relative aspect-[16/10] w-full overflow-hidden">
+        <div className="relative aspect-[16/10] w-full overflow-hidden flex items-center justify-center p-3 md:p-5">
+          {/* Ambient Blurred Background to fill empty spaces naturally */}
+          <img
+            src={projectImg}
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 w-full h-full object-cover blur-2xl opacity-40 scale-110 pointer-events-none"
+          />
+
+          {/* Full Uncropped Project Screenshot */}
           <img
             src={projectImg}
             alt={`${title} preview`}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+            className="relative z-10 max-w-full max-h-full w-auto h-auto object-contain rounded-lg shadow-2xl group-hover:scale-[1.03] transition-transform duration-700 ease-out"
           />
+
           {/* Subtle Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/30 opacity-50 group-hover:opacity-30 transition-opacity duration-500 pointer-events-none z-10" />
           
           {/* Top Badge Overlay */}
-          <div className="absolute top-4 left-4 z-10 flex items-center gap-2">
+          <div className="absolute top-4 left-4 z-20 flex items-center gap-2">
             <span className="px-3 py-1 rounded-full bg-black/70 backdrop-blur-md border border-neutral-700/80 text-[11px] font-mono text-[#d2b99f]">
               {year} &bull; {category}
             </span>
           </div>
 
           {/* Hover Overlay Hint */}
-          <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none z-20">
+          <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none z-30">
             <span className="px-5 py-2.5 rounded-full bg-black/80 border border-[#d2b99f]/40 text-custom-vanila text-xs font-planeBold tracking-wider uppercase shadow-2xl transform translate-y-3 group-hover:translate-y-0 transition-transform flex items-center gap-2">
               <span>EXPLORE CASE STUDY</span>
               <span className="text-sm">↗</span>

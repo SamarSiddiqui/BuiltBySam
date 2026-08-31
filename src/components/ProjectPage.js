@@ -109,11 +109,20 @@ const ProjectPage = () => {
       </div>
 
       {/* Hero Showcase Image */}
-      <div className="project-detail-hero relative rounded-2xl overflow-hidden border border-neutral-800/80 bg-neutral-900 shadow-2xl mb-16 aspect-[16/9] w-full">
+      <div className="project-detail-hero relative rounded-2xl overflow-hidden border border-neutral-800/80 bg-neutral-950 shadow-2xl mb-16 min-h-[300px] md:min-h-[480px] lg:min-h-[560px] flex items-center justify-center p-4 md:p-8">
+        {/* Ambient Blurred Background to frame non-matching aspect ratio screenshots */}
+        <img
+          src={projectImg}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover blur-3xl opacity-35 scale-110 pointer-events-none"
+        />
+
+        {/* Full Uncropped Project Screenshot */}
         <img
           src={projectImg}
           alt={`${title} full showcase`}
-          className="w-full h-full object-cover"
+          className="relative z-10 max-w-full max-h-[75vh] w-auto h-auto object-contain rounded-xl shadow-2xl border border-neutral-800/60"
         />
       </div>
 

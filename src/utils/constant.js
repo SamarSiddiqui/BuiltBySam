@@ -24,7 +24,7 @@ export const projectData = [
     year: "2024",
     role: "Full-Stack Architecture & AI Systems",
     projectImg: sproutlyImg,
-    description: "Sproutly is an intelligent digital greenhouse companion designed to eliminate urban plant parent burnout. Built with Next.js 14, Supabase, real-time weather telemetry, and OpenAI, it converts static watering calendars into dynamic, weather-aware care routines. 🌿✨",
+    description: "Sproutly is an intelligent digital greenhouse companion designed to eliminate urban plant parent burnout. Built with Next.js 14, Supabase, real-time weather telemetry, and OpenAI, it converts static watering calendars into dynamic, weather-aware care routines.",
     overview: "As an engineer passionate about botany and modern web architecture, I built Sproutly to solve a common real-world problem: static plant tracking apps fail to account for weather shifts or species-specific nuances. Sproutly acts as an automated digital greenhouse dashboard. It monitors real-time geographical weather data to trigger smart 'Rain Delay' watering skips, provides natural language AI search across plant collections, and structures user data safely with Supabase Row Level Security.",
     highlights: [
       "Proactive AI Care Advisor analyzing seasonal & species telemetry",
@@ -41,13 +41,13 @@ export const projectData = [
     }
   },
   {
-    id: "project1",
+    id: "netflix-gpt",
     title: "Netflix-GPT",
     category: "AI Movie Discovery & Streaming App",
     year: "2024",
     role: "Full-Stack Architecture & AI Integration",
     projectImg: projectImg1,
-    description: 'Step into Netflix-GPT, your AI-powered movie companion! Enjoy personalized film suggestions with GPT, real-time "Airing Today" updates, and trending topics—all fetched seamlessly from the TMDB API. Effortlessly uncover your next favorite movie with intelligent recommendations and live data integration. 🎥✨',
+    description: 'Step into Netflix-GPT, your AI-powered movie companion! Enjoy personalized film suggestions with GPT, real-time "Airing Today" updates, and trending topics—all fetched seamlessly from the TMDB API. Effortlessly uncover your next favorite movie with intelligent recommendations and live data integration.',
     overview: "Netflix-GPT combines the sleek browsing interface of popular streaming platforms with OpenAI's GPT recommendation engine. Built on React 19 and Redux Toolkit, it manages multi-lingual search, user authentication via Firebase, and real-time movie telemetry through the TMDB REST API.",
     highlights: [
       "AI-driven movie recommendation prompt interface",
@@ -63,13 +63,13 @@ export const projectData = [
     }
   },
   {
-    id: "project2",
+    id: "spotify-clone",
     title: "Spotify Clone",
     category: "Dynamic Web Audio Player",
     year: "2023",
     role: "Frontend & Custom Audio Player Engine",
     projectImg: projectImg2,
-    description: "Immerse yourself in a Spotify-inspired clone that brings music to life with sleek design and intuitive functionality. Powered by JSON, it dynamically fetches and manages song data to enhance user experience. Features include seamless navigation, real-time song tracking, dynamic volume control, and a captivating like button animation. 🎶✨",
+    description: "Immerse yourself in a Spotify-inspired clone that brings music to life with sleek design and intuitive functionality. Powered by JSON, it dynamically fetches and manages song data to enhance user experience. Features include seamless navigation, real-time song tracking, dynamic volume control, and a captivating like button animation.",
     overview: "A custom-engineered web audio player built with vanilla JavaScript, HTML5 Audio API, and CSS3 animations. Features dynamic playlist loading from structured JSON endpoints, real-time progress scrubbing, custom volume controls, and responsive dark aesthetics.",
     highlights: [
       "Custom HTML5 Audio Engine & custom scrubbing controls",
@@ -85,13 +85,13 @@ export const projectData = [
     }
   },
   {
-    id: "project3",
+    id: "apple-clone",
     title: "Apple Clone",
     category: "Interactive Product Experience",
     year: "2023",
     role: "UI/UX Micro-Interactions & Layout",
     projectImg: projectImg3,
-    description: "Dive into my first project, an Apple-inspired clone that captures the brand's sleek and seamless essence. Featuring a dynamic hamburger dropdown menu and an infinite carousel showcasing Apple movies, this project merges elegant design with intuitive navigation. A polished blend of creativity and functionality awaits! 🍎✨",
+    description: "Dive into my first project, an Apple-inspired clone that captures the brand's sleek and seamless essence. Featuring a dynamic hamburger dropdown menu and an infinite carousel showcasing Apple movies, this project merges elegant design with intuitive navigation. A polished blend of creativity and functionality awaits!",
     overview: "A pixel-perfect recreation of Apple's flagship product showcase. Designed with fluid CSS flexbox/grid architecture, smooth navigation headers, infinite video carousels, and responsive typography tuned across all screen sizes.",
     highlights: [
       "Apple aesthetic design system & typography scale",
@@ -107,13 +107,13 @@ export const projectData = [
     }
   },
   {
-    id: "project4",
+    id: "venom-trail",
     title: "Venom Trail",
     category: "Retro Arcade Game Engine",
     year: "2023",
     role: "Game Physics & DOM Manipulation",
     projectImg: projectImg4,
-    description: "Step into the world of classic gaming with my dynamic Snake game! Built with advanced DOM manipulation and JavaScript, it features a growing snake, collision detection, and engaging sound effects. Enjoy an immersive experience with seamless gameplay mechanics and intuitive controls that keep the fun alive. 🐍🎮✨",
+    description: "Step into the world of classic gaming with my dynamic Snake game! Built with advanced DOM manipulation and JavaScript, it features a growing snake, collision detection, and engaging sound effects. Enjoy an immersive experience with seamless gameplay mechanics and intuitive controls that keep the fun alive.",
     overview: "Venom Trail is a high-performance browser arcade game written in raw JavaScript. It implements a custom game loop using requestAnimationFrame, grid collision detection, progressive speed scaling, score tracking, and sound synthesizers.",
     highlights: [
       "Smooth requestAnimationFrame game loop & grid system",
