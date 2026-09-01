@@ -14,7 +14,6 @@ const AboutPreview = () => {
       rotate: 270,
       scrollTrigger: {
         trigger: '.star-img',
-        scroller: 'body',
         start: 'top 100%',
         end: 'top 0%',
         scrub: true,
@@ -28,7 +27,6 @@ const AboutPreview = () => {
       y: 50,
       scrollTrigger: {
         trigger: '.profile-img',
-        scroller: 'body',
         start: 'top 80%',
         end: 'top 20%',
         scrub: true,
@@ -43,7 +41,6 @@ const AboutPreview = () => {
       ease: 'power1',
       scrollTrigger: {
         trigger: '.about-intro',
-        scroller: 'body',
         start: 'top 90%',
         end: 'top 30%',
         // markers:true,
@@ -87,13 +84,10 @@ const AboutPreview = () => {
       <div className="flex-1 flex">
         <div className="w-full flex smallerTab:block justify-center items-center">
           {/* Profile Section */}
-          <div className="h-full w-1/2 flex justify-center items-center smallerTab:w-full smallerTab:h-auto relative">
-            {/* Ambient Glow behind profile frame */}
-            <div className="absolute w-[18em] h-[24em] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#d2b99f]/15 via-transparent to-transparent blur-2xl pointer-events-none" />
-
-            <div className="profile-img group relative p-3 rounded-[65px] bg-neutral-900/60 border border-neutral-800/80 shadow-2xl backdrop-blur-md hover:border-[#d2b99f]/50 transition-all duration-500 max-w-[22em] mx-6">
+          <div className="h-full w-1/2 flex justify-center smallerTab:w-full smallerTab:h-96">
+            <div className="h-2/3 w-[20em] mx-6 smallerTab:h-96">
               <img
-                className="w-full h-[26em] object-cover rounded-[55px] shadow-inner group-hover:scale-[1.02] transition-transform duration-500"
+                className="profile-img w-full h-full object-cover rounded-[70px]"
                 alt="profile_image"
                 src={Profile_Img}
               />
