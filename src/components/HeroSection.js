@@ -1,13 +1,10 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import useShapeFalling from "../hooks/useShapeFalling";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const HeroSection = ({ sectionRef }) => {
-  useShapeFalling(".heading-flower", ".shapes");
-
   useGSAP(() => {
     const headings = gsap.utils.toArray(".heading");
     if (headings.length) {
@@ -43,28 +40,27 @@ const HeroSection = ({ sectionRef }) => {
               AVAILABLE FOR OPPORTUNITIES &bull; FULL STACK DEVELOPER
             </span>
           </div>
-          {/* ShapesContainer */}
-          <div className="shapes absolute z-[999] top-0 left-0 w-full h-full pointer-events-none"></div>
         </div>
+
         {/* Headings */}
         <div className="hero-heading cont relative overflow-hidden opacity-0 text-center">
-          <h1 className="heading-flower text-center w-full uppercase text-[clamp(55px,11vw,180px)] font-grandSlangRoman leading-[0.9] largerMobile:leading-[1.1] hover:text-[#d2b99f] transition-colors duration-500 cursor-default">
+          <h1 className="text-center w-full uppercase text-[clamp(55px,11vw,180px)] font-grandSlangRoman leading-[0.9] largerMobile:leading-[1.1] hover:text-[#d2b99f] transition-colors duration-500 cursor-default">
             Building
           </h1>
         </div>
         <div className="hero-heading heading mt-2 opacity-0">
-          <h1 className="heading-flower uppercase text-[clamp(60px,11vw,200px)] font-grandSlangRoman leading-[0.8] largerMobile:leading-[0.8] hover:text-[#d2b99f] transition-colors duration-500 cursor-default">
+          <h1 className="uppercase text-[clamp(60px,11vw,200px)] font-grandSlangRoman leading-[0.8] largerMobile:leading-[0.8] hover:text-[#d2b99f] transition-colors duration-500 cursor-default">
             Delightful
           </h1>
         </div>
         <div className="hero-heading heading mt-2 opacity-0">
-          <h1 className="heading-flower font-grandSlangItalic text-[clamp(50px,10vw,150px)] leading-[0.5] largerMobile:leading-[0.5] text-[#d2b99f] hover:text-white transition-colors duration-500 cursor-default">
+          <h1 className="font-grandSlangItalic text-[clamp(50px,10vw,150px)] leading-[0.5] largerMobile:leading-[0.5] text-[#d2b99f] hover:text-white transition-colors duration-500 cursor-default">
             experiences
           </h1>
         </div>
         <div className="hero-heading opacity-0 leading-[1.8] mt-1 flex justify-center items-center largerMobile:mt-2">
           <h2 className="font-migraLightItalic text-[clamp(18px,3.5vw,35px)] text-gray-400 mr-3">for a</h2>
-          <h1 className="heading heading-flower text-[clamp(45px,7vw,100px)] font-migraBoldItalic font-extrabold hover:text-[#d2b99f] transition-colors duration-500 cursor-default">
+          <h1 className="heading text-[clamp(45px,7vw,100px)] font-migraBoldItalic font-extrabold hover:text-[#d2b99f] transition-colors duration-500 cursor-default">
             business world
           </h1>
         </div>
