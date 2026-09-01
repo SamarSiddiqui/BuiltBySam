@@ -64,7 +64,7 @@ const MarqueeSection = () => {
   const topBottomText =
     "Playing / Trying / Sleeping / Failing / Dreaming / Playing / Trying / Sleeping / Failing / Dreaming / Playing / Trying / Sleeping / Failing / Dreaming / Playing / Trying / Sleeping / Failing / Dreaming / ";
 
-  const middleText = Array(10).fill("MY PLAYGROUND \u00A0\u2022\u00A0 ").join("");
+  const middleText = Array(12).fill("MY PLAYGROUND \u00A0\u2022\u00A0 ").join("");
 
   return (
     <section

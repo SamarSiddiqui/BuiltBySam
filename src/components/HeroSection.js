@@ -30,12 +30,19 @@ const HeroSection = ({ sectionRef }) => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="min-h-[100vh] smallerTab:min-h-[95vh] flex items-center">
-      <div className="smallerTab:mb-12 smallerTab:mt-0 mt-10 w-full h-full text-center">
-        <div className="my-5 hero-heading opacity-0">
-          <h2 className="uppercase font-planeBold leading-[2] text-[clamp(10px,2.5vw,14px)] font-bold">
-            Full Stack Developer | From Pixels to Production
-          </h2>
+    <div ref={sectionRef} className="min-h-[100vh] smallerTab:min-h-[95vh] flex items-center relative overflow-hidden">
+      {/* Ambient Radial Spotlight Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90vw] max-w-4xl h-[60vh] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#d2b99f]/12 via-[#d2b99f]/3 to-transparent blur-3xl pointer-events-none z-0" />
+
+      <div className="smallerTab:mb-12 smallerTab:mt-0 mt-10 w-full h-full text-center relative z-10">
+        {/* Status Pill Badge */}
+        <div className="my-5 hero-heading opacity-0 relative flex justify-center">
+          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-neutral-900/80 border border-neutral-800 backdrop-blur-md shadow-lg">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span className="text-[11px] md:text-xs uppercase font-mono tracking-widest text-[#d2b99f]">
+              AVAILABLE FOR OPPORTUNITIES &bull; FULL STACK DEVELOPER
+            </span>
+          </div>
           {/* ShapesContainer */}
           <div className="shapes absolute z-[999] top-0 left-0 w-full h-full pointer-events-none"></div>
         </div>
