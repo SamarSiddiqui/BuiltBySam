@@ -79,7 +79,7 @@ const MarqueeSection = () => {
       </div>
 
       {/* Middle Playground Marquee */}
-      <div className="overflow-hidden whitespace-nowrap w-full my-2">
+      <div className="overflow-hidden whitespace-nowrap w-full my-2 pt-4">
         <div className="marquee-line-middle text-[clamp(50px,10vw,140px)] font-grandSlangItalic whitespace-nowrap text-[#d2b99f] inline-block leading-none">
           {middleText}
         </div>
