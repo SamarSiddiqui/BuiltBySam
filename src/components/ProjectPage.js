@@ -133,7 +133,7 @@ const ProjectPage = () => {
         <div className="lg:col-span-7 flex flex-col gap-8">
           <div>
             <h3 className="text-xs uppercase tracking-widest text-[#d2b99f] font-planeBold mb-3">
-              01 // PROJECT OVERVIEW
+              PROJECT OVERVIEW
             </h3>
             <p className="text-gray-300 font-planeItalic text-lg leading-relaxed">
               {overview || description}
@@ -143,7 +143,7 @@ const ProjectPage = () => {
           {highlights && highlights.length > 0 && (
             <div>
               <h3 className="text-xs uppercase tracking-widest text-[#d2b99f] font-planeBold mb-4">
-                02 // KEY FEATURES & HIGHLIGHTS
+                KEY FEATURES & HIGHLIGHTS
               </h3>
               <ul className="flex flex-col gap-3">
                 {highlights.map((item, idx) => (

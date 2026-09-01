@@ -82,7 +82,7 @@ const CertificationsSection = () => {
           <div className="flex items-center gap-2 mb-3">
             <span className="w-2 h-2 rounded-full bg-[#d2b99f] animate-pulse"></span>
             <span className="text-xs uppercase tracking-widest text-gray-400 font-planeBold">
-              03 // RECOGNITION & CREDENTIALS
+              RECOGNITION & CREDENTIALS
             </span>
           </div>
           <h2 className="text-[clamp(32px,5vw,64px)] font-grandSlangRoman leading-[1.05] mb-6">

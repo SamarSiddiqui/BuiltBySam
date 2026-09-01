@@ -78,7 +78,7 @@ const SkillSection = () => {
         <div className="inline-flex items-center gap-2 mb-4 px-3.5 py-1 rounded-full bg-[#d2b99f]/10 border border-[#d2b99f]/30">
           <span className="w-2 h-2 rounded-full bg-[#d2b99f] animate-pulse"></span>
           <span className="text-xs uppercase tracking-widest text-[#d2b99f] font-planeBold">
-            04 // TECHNICAL & PERSONAL CAPABILITIES
+            TECHNICAL & PERSONAL CAPABILITIES
           </span>
         </div>
 
@@ -100,7 +100,7 @@ const SkillSection = () => {
           <div className="flex items-center justify-between border-b border-neutral-800/80 pb-5 mb-6">
             <div>
               <span className="text-xs uppercase tracking-widest text-[#d2b99f] font-planeBold block mb-1">
-                01 // TECHNICAL STACK
+                TECHNICAL STACK
               </span>
               <h3 className="text-2xl font-grandSlangRoman text-gray-100">
                 Core Engineering Tools
@@ -141,7 +141,7 @@ const SkillSection = () => {
             <div className="flex items-center justify-between border-b border-neutral-800/80 pb-5 mb-6">
               <div>
                 <span className="text-xs uppercase tracking-widest text-[#d2b99f] font-planeBold block mb-1">
-                  02 // INTERPERSONAL & WORK ETHIC
+                  INTERPERSONAL & WORK ETHIC
                 </span>
                 <h3 className="text-2xl font-grandSlangRoman text-gray-100">
                   Mindset & Leadership
