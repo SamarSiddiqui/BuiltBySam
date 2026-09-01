@@ -130,9 +130,27 @@ export const projectData = [
   },
 ]
 
-export const hardSkills = ['Next.js', 'Node.js', 'Golang', 'RAG', 'TypeScript', 'Redux', 'GSAP', 'System Design', 'MongoDB', 'Supabase', 'Git & Github', 'Figma', 'Docker', 'CI/CD & Deployment', '& more']
+export const categorizedSkills = [
+  {
+    category: "Full-Stack & Cloud",
+    icon: "⚡",
+    skills: ["Next.js 14", "Node.js", "Golang", "Supabase", "MongoDB", "REST APIs"]
+  },
+  {
+    category: "AI & Systems Architecture",
+    icon: "🧠",
+    skills: ["RAG Systems", "LLM Integration", "System Design", "Docker", "CI/CD & Deployment", "Git & GitHub"]
+  },
+  {
+    category: "Frontend & Motion",
+    icon: "🎨",
+    skills: ["React 19", "TypeScript", "Redux Toolkit", "GSAP Animations", "Tailwind CSS", "Figma"]
+  }
+];
 
-export const softSkills = ['Team Collaboration', 'Ownership & Accountability', 'Problem Solving', 'Attention to Detail', 'Adaptability', 'Leadership in Small Teams', 'Commuinication', 'Curiosity & Continuous Learning', 'Time Management', 'Code Reviews']
+export const hardSkills = ['Next.js', 'Node.js', 'Golang', 'RAG', 'TypeScript', 'Redux', 'GSAP', 'System Design', 'MongoDB', 'Supabase', 'Git & Github', 'Figma', 'Docker', 'CI/CD & Deployment', '& more'];
+
+export const softSkills = ['Team Collaboration', 'Ownership & Accountability', 'Problem Solving', 'Attention to Detail', 'Adaptability', 'Leadership in Teams', 'Communication', 'Continuous Learning', 'Time Management', 'Code Reviews'];
 
 
 export const certificationData = [
