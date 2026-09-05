@@ -39,7 +39,7 @@ const HeroSection = ({ sectionRef }) => {
             <span className="text-[10px] sm:text-[11px] md:text-xs uppercase font-mono tracking-widest text-[#d2b99f] text-center leading-tight">
               <span className="block md:inline">AVAILABLE FOR OPPORTUNITIES</span>
               <span className="hidden md:inline"> &bull; </span>
-              <span className="block md:inline text-[9px] sm:text-[10px] md:text-xs opacity-90 md:opacity-100">FULL STACK DEVELOPER</span>
+              <span className="block md:inline text-[9px] sm:text-[10px] md:text-xs opacity-90 md:opacity-100">FULL STACK Engineer</span>
             </span>
           </div>
         </div>
