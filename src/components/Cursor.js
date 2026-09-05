@@ -196,11 +196,11 @@ const Cursor = () => {
       <canvas
         ref={canvasRef}
         aria-hidden="true"
-        className="fixed inset-0 pointer-events-none z-[9998]"
+        className="fixed inset-0 pointer-events-none z-[999998]"
       />
       <div
         ref={cursorRef}
-        className="w-5 h-5 rounded-full bg-[rgba(233,233,206,0.8)] fixed z-[9999] top-0 left-0 pointer-events-none mix-blend-difference opacity-0 proTablet:w-0 proTablet:cursor-pointer"
+        className="w-5 h-5 rounded-full bg-[rgba(233,233,206,0.8)] fixed z-[999999] top-0 left-0 pointer-events-none mix-blend-difference opacity-0 proTablet:w-0 proTablet:cursor-pointer"
       />
     </>
   );

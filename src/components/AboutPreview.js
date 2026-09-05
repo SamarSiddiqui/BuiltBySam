@@ -34,19 +34,20 @@ const AboutPreview = () => {
     });
 
     // About Section Animation
-    gsap.to('.about-intro', {
-      opacity: 1,
-      y: -50,
-      duration: 10,
-      ease: 'power1',
-      scrollTrigger: {
-        trigger: '.about-intro',
-        start: 'top 90%',
-        end: 'top 30%',
-        // markers:true,
-        scrub: true,
-      },
-    });
+    gsap.fromTo(
+      '.about-intro',
+      { opacity: 0, y: 30 },
+      {
+        opacity: 1,
+        y: 0,
+        scrollTrigger: {
+          trigger: '.about-intro',
+          start: 'top 90%',
+          end: 'top 40%',
+          scrub: true,
+        },
+      }
+    );
 
     // SplitContent Paragraphs Animation
     const paragraphs = document.querySelectorAll('.about-section');
@@ -84,10 +85,10 @@ const AboutPreview = () => {
       <div className="flex-1 flex">
         <div className="w-full flex smallerTab:block justify-center items-center">
           {/* Profile Section */}
-          <div className="h-full w-1/2 flex justify-center smallerTab:w-full smallerTab:h-96">
-            <div className="h-2/3 w-[20em] mx-6 smallerTab:h-96">
+          <div className="h-full w-1/2 flex justify-center smallerTab:w-full smallerTab:h-auto smallerTab:mb-8">
+            <div className="w-[16em] sm:w-[20em] h-[20em] sm:h-[24em] mx-6">
               <img
-                className="profile-img w-full h-full object-cover rounded-[70px]"
+                className="profile-img w-full h-full object-cover rounded-[45px] sm:rounded-[70px]"
                 alt="profile_image"
                 src={Profile_Img}
               />
@@ -96,7 +97,7 @@ const AboutPreview = () => {
 
           {/* Intro Section */}
           <div className="about-intro opacity-0 font-migraLight w-1/2 h-full text-[clamp(17px,2.2vw,19px)] smallerTab:w-full smallerTab:flex smallerTab:justify-center smallerTab:h-auto">
-            <div className="mt-8 lg:mt-12 w-[85%] max-w-xl proTablet:w-[90%] smallerTab:px-5 tracking-wider break-words">
+            <div className="mt-2 sm:mt-8 lg:mt-12 w-[85%] max-w-xl proTablet:w-[90%] smallerTab:px-5 tracking-wider break-words">
               {/* Eyebrow Badge */}
               <div className="flex items-center gap-2 mb-4">
                 <span className="w-2 h-2 rounded-full bg-[#d2b99f] animate-pulse"></span>
@@ -109,7 +110,7 @@ const AboutPreview = () => {
                 Nice to <span className="font-migraLightItalic text-[#d2b99f]">meet you.</span>
               </p>
               <p className="about-section leading-relaxed text-gray-300">
-                Welcome to my corner of the web. I’m Samar Siddiqui, a passionate self-taught full stack developer who builds complete digital experiences from <span className="font-migraLightItalic text-[#d2b99f]">pixel to production</span>. I craft smooth interfaces with <span className="text-white font-medium">React, Next.js, and GSAP</span> while designing scalable backends in <span className="text-white font-medium">Golang or Node.js</span>.
+                Welcome to my corner of the web. I’m Samar Siddiqui, a passionate self-taught full stack developer who builds complete digital experiences from <span className="font-migraLightItalic text-[#d2b99f]">pixel to production</span>. I craft smooth interfaces with <span className="text-white font-medium">React, Next.js, and GSAP</span> while designing scalable backends in <span className="text-white font-medium">Golang or Node.js</span>, continuously expanding into <span className="text-white font-medium">AI & intelligent systems</span>.
               </p>
               <p className="about-section leading-relaxed mt-4 text-gray-300">
                 I hold a{' '}
@@ -118,13 +119,10 @@ const AboutPreview = () => {
                 <span className="font-migraLightItalic text-[#d2b99f]">
                   Aligarh Muslim University
                 </span>
-                , where my journey into tech began. What started as curiosity and problem-solving has grown into a full stack skill set focused on architecting scalable end-to-end solutions.
-              </p>
-              <p className="about-section leading-relaxed my-4 text-gray-300">
-                As a full stack developer, I focus on creating responsive, high-performance applications with clean architecture and maintainable code. My projects emphasize seamless user experiences and systems designed to scale gracefully.
+                , where my journey into tech began. What started as curiosity and problem-solving has grown into a full stack skill set focused on architecting scalable end-to-end solutions and leveraging modern AI workflows.
               </p>
               <p className="about-section leading-relaxed mt-4 mb-3 text-gray-300">
-                I’d love the opportunity to collaborate and bring your vision to life — from elegant front-end interactions to solid, scalable back-end architecture. Let’s connect and build something amazing together!
+                As a full stack developer, I focus on creating responsive, high-performance applications with clean architecture and maintainable code. I’d love the opportunity to collaborate and bring your vision to life — from elegant front-end interactions to solid, scalable back-end architecture and AI-enhanced features. Let’s connect and build something amazing together!
               </p>
             </div>
           </div>

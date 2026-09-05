@@ -71,7 +71,7 @@ const SkillSection = () => {
   return (
     <section
       ref={skillContainer}
-      className="min-h-screen py-24 text-custom-vanila relative max-w-7xl mx-auto px-6 flex flex-col justify-center"
+      className="min-h-screen py-24 text-custom-vanila relative max-w-7xl mx-auto px-4 sm:px-6 flex flex-col justify-center"
     >
       {/* Editorial Header Section */}
       <div className="skill-heading-block text-center max-w-3xl mx-auto mb-16">
@@ -96,24 +96,24 @@ const SkillSection = () => {
       <div className="skill-cards-grid grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         
         {/* Left Column: Hard Skills & Domain Clusters (7 Cols) */}
-        <div className="skill-card lg:col-span-7 bg-neutral-900/60 border border-neutral-800/80 rounded-3xl p-8 backdrop-blur-md shadow-2xl hover:border-[#d2b99f]/40 transition-all duration-500">
+        <div className="skill-card lg:col-span-7 bg-neutral-900/60 border border-neutral-800/80 rounded-3xl p-5 sm:p-7 lg:p-8 backdrop-blur-md shadow-2xl hover:border-[#d2b99f]/40 transition-all duration-500">
           <div className="flex items-center justify-between border-b border-neutral-800/80 pb-5 mb-6">
             <div>
               <span className="text-xs uppercase tracking-widest text-[#d2b99f] font-planeBold block mb-1">
                 TECHNICAL STACK
               </span>
-              <h3 className="text-2xl font-grandSlangRoman text-gray-100">
+              <h3 className="text-xl sm:text-2xl font-grandSlangRoman text-gray-100">
                 Core Engineering Tools
               </h3>
             </div>
-            <span className="px-3 py-1 rounded-full bg-black/60 border border-neutral-800 text-[11px] font-mono text-gray-400">
+            <span className="px-3 py-1 rounded-full bg-black/60 border border-neutral-800 text-[10px] sm:text-[11px] font-mono text-gray-400">
               HARD SKILLS
             </span>
           </div>
 
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-5">
             {categorizedSkills.map((domain, idx) => (
-              <div key={idx} className="bg-black/30 border border-neutral-800/60 rounded-2xl p-5">
+              <div key={idx} className="bg-black/30 border border-neutral-800/60 rounded-2xl p-4 sm:p-5">
                 <div className="flex items-center gap-2 mb-3">
                   <span className="text-base">{domain.icon}</span>
                   <span className="text-xs uppercase font-planeBold tracking-wider text-[#d2b99f]">
@@ -124,7 +124,7 @@ const SkillSection = () => {
                   {domain.skills.map((skill, sIdx) => (
                     <span
                       key={sIdx}
-                      className="skill-pill text-xs font-planeLight px-3.5 py-1.5 rounded-lg bg-neutral-800/80 text-gray-200 border border-neutral-700/60 hover:border-[#d2b99f]/50 hover:text-custom-vanila hover:scale-105 transition-all duration-300 cursor-default"
+                      className="skill-pill text-[11px] sm:text-xs font-planeLight px-3 py-1.5 rounded-lg bg-neutral-800/80 text-gray-200 border border-neutral-700/60 hover:border-[#d2b99f]/50 hover:text-custom-vanila hover:scale-105 transition-all duration-300 cursor-default max-w-full break-words"
                     >
                       {skill}
                     </span>
@@ -136,30 +136,30 @@ const SkillSection = () => {
         </div>
 
         {/* Right Column: Soft Skills & Mindset (5 Cols) */}
-        <div className="skill-card lg:col-span-5 bg-neutral-900/60 border border-neutral-800/80 rounded-3xl p-8 backdrop-blur-md shadow-2xl hover:border-[#d2b99f]/40 transition-all duration-500 self-stretch flex flex-col justify-between">
+        <div className="skill-card lg:col-span-5 bg-neutral-900/60 border border-neutral-800/80 rounded-3xl p-5 sm:p-7 lg:p-8 backdrop-blur-md shadow-2xl hover:border-[#d2b99f]/40 transition-all duration-500 self-stretch flex flex-col justify-between">
           <div>
             <div className="flex items-center justify-between border-b border-neutral-800/80 pb-5 mb-6">
               <div>
                 <span className="text-xs uppercase tracking-widest text-[#d2b99f] font-planeBold block mb-1">
                   INTERPERSONAL & WORK ETHIC
                 </span>
-                <h3 className="text-2xl font-grandSlangRoman text-gray-100">
+                <h3 className="text-xl sm:text-2xl font-grandSlangRoman text-gray-100">
                   Mindset & Leadership
                 </h3>
               </div>
-              <span className="px-3 py-1 rounded-full bg-black/60 border border-neutral-800 text-[11px] font-mono text-gray-400">
+              <span className="px-3 py-1 rounded-full bg-black/60 border border-neutral-800 text-[10px] sm:text-[11px] font-mono text-gray-400">
                 SOFT SKILLS
               </span>
             </div>
 
-            <div className="flex flex-wrap gap-2.5 pt-2">
+            <div className="flex flex-wrap gap-2 sm:gap-2.5 pt-2">
               {softSkills.map((skill, idx) => (
                 <div
                   key={idx}
-                  className="skill-pill group flex items-center gap-2.5 px-4 py-2 rounded-xl bg-black/40 border border-neutral-800 text-xs font-planeBold text-gray-300 hover:border-[#d2b99f]/50 hover:text-custom-vanila hover:scale-105 transition-all duration-300 cursor-default"
+                  className="skill-pill group flex items-center gap-2 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-black/40 border border-neutral-800 text-[11px] sm:text-xs font-planeBold text-gray-300 hover:border-[#d2b99f]/50 hover:text-custom-vanila hover:scale-105 transition-all duration-300 cursor-default max-w-full"
                 >
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#d2b99f] group-hover:scale-125 transition-transform" />
-                  <span>{skill}</span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#d2b99f] group-hover:scale-125 transition-transform shrink-0" />
+                  <span className="break-words">{skill}</span>
                 </div>
               ))}
             </div>

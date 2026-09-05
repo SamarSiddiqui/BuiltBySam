@@ -70,7 +70,7 @@ const CertificationsSection = () => {
       {/* Background Parallax Marquee Text */}
       <div className="absolute top-1/4 left-0 w-full pointer-events-none opacity-[0.04] z-0 select-none overflow-hidden">
         <h1 className="cert-bg-marquee font-grandSlangItalic text-[clamp(100px,22vw,320px)] whitespace-nowrap leading-none uppercase">
-          CERTIFICATIONS &nbsp;&bull;&nbsp; RECOGNITION &nbsp;&bull;&nbsp; CERTIFICATIONS &nbsp;&bull;&nbsp; RECOGNITION &nbsp;&bull;&nbsp;
+          {Array(8).fill("CERTIFICATIONS \u00A0\u2022\u00A0 RECOGNITION \u00A0\u2022\u00A0 ").join("")}
         </h1>
       </div>
 
@@ -132,11 +132,11 @@ const CertificationsSection = () => {
       {selectedCert && (
         <div
           onClick={() => setSelectedCert(null)}
-          className="fixed inset-0 z-[9999] bg-black/90 backdrop-blur-md flex items-center justify-center p-4 md:p-10 animate-fade-in"
+          className="fixed inset-0 z-[99990] bg-black/90 backdrop-blur-md flex items-center justify-center p-4 md:p-10 animate-fade-in cursor-pointer"
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="relative max-w-4xl w-full bg-neutral-900 border border-neutral-800 rounded-2xl overflow-hidden p-6 shadow-2xl flex flex-col gap-4"
+            className="relative max-w-4xl w-full bg-neutral-900 border border-neutral-800 rounded-2xl overflow-hidden p-6 shadow-2xl flex flex-col gap-4 cursor-default"
           >
             {/* Modal Header */}
             <div className="flex justify-between items-center border-b border-neutral-800 pb-4">

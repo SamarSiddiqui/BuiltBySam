@@ -33,11 +33,13 @@ const HeroSection = ({ sectionRef }) => {
 
       <div className="smallerTab:mb-12 smallerTab:mt-0 mt-10 w-full h-full text-center relative z-10">
         {/* Status Pill Badge */}
-        <div className="my-5 hero-heading opacity-0 relative flex justify-center">
-          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-neutral-900/80 border border-neutral-800 backdrop-blur-md shadow-lg">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span className="text-[11px] md:text-xs uppercase font-mono tracking-widest text-[#d2b99f]">
-              AVAILABLE FOR OPPORTUNITIES &bull; FULL STACK DEVELOPER
+        <div className="my-5 hero-heading opacity-0 relative flex justify-center px-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-2xl md:rounded-full bg-neutral-900/80 border border-neutral-800 backdrop-blur-md shadow-lg max-w-full">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
+            <span className="text-[10px] sm:text-[11px] md:text-xs uppercase font-mono tracking-widest text-[#d2b99f] text-center leading-tight">
+              <span className="block md:inline">AVAILABLE FOR OPPORTUNITIES</span>
+              <span className="hidden md:inline"> &bull; </span>
+              <span className="block md:inline text-[9px] sm:text-[10px] md:text-xs opacity-90 md:opacity-100">FULL STACK DEVELOPER</span>
             </span>
           </div>
         </div>

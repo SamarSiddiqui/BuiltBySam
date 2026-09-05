@@ -13,6 +13,7 @@ import html from '../assets/tech-icons/html.png'
 import api from '../assets/tech-icons/api.png'
 import json from '../assets/tech-icons/json.webp'
 import claudeCertImg from '../assets/certifications/claude_certification.jpg'
+import claudeMcpCertImg from '../assets/certifications/claude_mcp_certificate.png'
 import helsinkiCertImg from '../assets/certifications/certificate-elements-of-ai.png'
 import fccBackendCertImg from '../assets/certifications/backend_freecode_certificate.avif'
 
@@ -20,18 +21,18 @@ export const projectData = [
   {
     id: "sproutly",
     title: "Sproutly",
-    category: "AI Botany & Plant Care Ecosystem",
+    category: "Smart Urban Plant Care & AI Companion",
     year: "2024",
     role: "Full-Stack Architecture & AI Systems",
     projectImg: sproutlyImg,
-    description: "Sproutly is an intelligent digital greenhouse companion designed to eliminate urban plant parent burnout. Built with Next.js 14, Supabase, real-time weather telemetry, and OpenAI, it converts static watering calendars into dynamic, weather-aware care routines.",
-    overview: "As an engineer passionate about botany and modern web architecture, I built Sproutly to solve a common real-world problem: static plant tracking apps fail to account for weather shifts or species-specific nuances. Sproutly acts as an automated digital greenhouse dashboard. It monitors real-time geographical weather data to trigger smart 'Rain Delay' watering skips, provides natural language AI search across plant collections, and structures user data safely with Supabase Row Level Security.",
+    description: "Sproutly is your smart balcony & terrace garden companion built for city dwellers. Just log your plants, and Sproutly handles the rest — generating personalized watering and fertilizing schedules, auto-adjusting care plans when it rains, and powering Sproutly AI, a 24/7 expert assistant that knows your garden inside out.",
+    overview: "Gardening in the city should be fun, not stressful. I built Sproutly to make urban plant care effortless for anyone running a balcony or terrace garden. Simply log your plants to get a personalized care plan detailing exactly when to water, fertilize, and take care of your greens. Sproutly syncs with live local weather to auto-delay watering after heavy rainfall so you never overwater. Plus, Sproutly AI is always ready to chat — offering instant, tailored advice based on your specific plant collection.",
     highlights: [
-      "Proactive AI Care Advisor analyzing seasonal & species telemetry",
-      "Weather-aware automation triggering 'Rain Delay' skips on high precipitation",
-      "Natural language AI collection search & conversational query filtering",
-      "Supabase PostgreSQL database secured with Row Level Security (RLS)",
-      "TanStack Query client caching & Recharts environmental analytics"
+      "Personalized watering & fertilizing schedules tailored to your balcony garden",
+      "Smart weather sync that auto-adjusts watering schedules after heavy rainfall",
+      "Sproutly AI assistant for instant, personalized plant care advice 24/7",
+      "Easy plant logging to track growth, health, and care history effortlessly",
+      "Built with Next.js 14, Supabase backend, and OpenAI integration"
     ],
     techStack: [react, tailwind, api, json],
     techNames: ["Next.js 14", "Supabase (PostgreSQL)", "GSAP", "OpenAI API"],
@@ -180,6 +181,15 @@ export const certificationData = [
     credentialUrl: "https://freecodecamp.org/certification/samarsiddiqui/back-end-development-and-apis-v9",
     tags: ["Node.js", "Express", "MongoDB", "Mongoose", "REST APIs"],
     certImg: fccBackendCertImg
+  },
+  {
+    id: "cert-4",
+    title: "Claude & Model Context Protocol (MCP)",
+    issuer: "Anthropic / Skilljar",
+    date: "2026",
+    credentialUrl: "https://verify.skilljar.com/c/8eyovok5ac7i",
+    tags: ["Claude", "MCP", "Model Context Protocol", "AI Tooling"],
+    certImg: claudeMcpCertImg
   }
 ];
 
