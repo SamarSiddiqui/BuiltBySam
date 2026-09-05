@@ -1,3 +1,4 @@
+import zenithImg from '../assets/Projects/zenith_bg_img.png'
 import sproutlyImg from '../assets/Projects/sproutlyBg.avif'
 import projectImg1 from '../assets/Projects/netflixBg.png'
 import projectImg2 from '../assets/Projects/spotifyBg.png'
@@ -19,9 +20,34 @@ import fccBackendCertImg from '../assets/certifications/backend_freecode_certifi
 
 export const projectData = [
   {
+    id: "zenith",
+    title: "Zenith",
+    category: "Behavioral Consistency & Habit Intelligence",
+    categories: ["AI", "FullStack"],
+    year: "2025",
+    role: "Full-Stack Architecture & Systems Design",
+    projectImg: zenithImg,
+    description: "Most habit trackers break your momentum: miss a single day, and your streak resets to zero. Zenith is a behavioral consistency system built for real, unpredictable schedules. Instead of all-or-nothing streaks, Zenith calculates a resilient Habit Health Index, maps your actual usable time gaps around work shifts, and automatically auto-scales 45-minute habits into 5-minute micro-sessions when life gets busy — ensuring your momentum never resets to zero.",
+    overview: "Traditional habit trackers fail because they demand 24-hour perfection: miss one day, and weeks of hard work reset to zero, triggering guilt and app abandonment. I built Zenith to replace streak anxiety with true behavioral resilience. Zenith calculates your real available energy windows around busy work shifts, detects schedule fatigue before your habits break, and uses a 'Shrink, Don't Skip' system to dynamically adapt full routines into quick micro-sessions on overwhelming days — keeping your habit identity alive without the guilt.",
+    highlights: [
+      "Dynamic Habit Health Index (0–100%) replacing fragile binary streak resets",
+      "Usable Working Window Engine mapping habits inside real available time gaps",
+      "'Shrink, Don't Skip' micro-sessions auto-scaling routines during high-fatigue days",
+      "Schedule-Tied Root Cause Diagnosis pinpointing contextual triggers for missed habits",
+      "Built with Next.js 14, Supabase backend, RAG, and OpenAI integration"
+    ],
+    techStack: [react, tailwind, api, json],
+    techNames: ["Next.js 14", "Supabase", "GSAP", "RAG", "OpenAI API"],
+    links: {
+      liveLink: "https://zenithf1ow.vercel.app/",
+      sourceLink: "https://github.com/SamarSiddiqui/Zenith"
+    }
+  },
+  {
     id: "sproutly",
     title: "Sproutly",
     category: "Smart Urban Plant Care & AI Companion",
+    categories: ["AI", "FullStack"],
     year: "2024",
     role: "Full-Stack Architecture & AI Systems",
     projectImg: sproutlyImg,
@@ -45,8 +71,9 @@ export const projectData = [
     id: "netflix-gpt",
     title: "Netflix-GPT",
     category: "AI Movie Discovery & Streaming App",
+    categories: ["AI"],
     year: "2024",
-    role: "Full-Stack Architecture & AI Integration",
+    role: "Frontend Architecture & AI Integration",
     projectImg: projectImg1,
     description: 'Step into Netflix-GPT, your AI-powered movie companion! Enjoy personalized film suggestions with GPT, real-time "Airing Today" updates, and trending topics—all fetched seamlessly from the TMDB API. Effortlessly uncover your next favorite movie with intelligent recommendations and live data integration.',
     overview: "Netflix-GPT combines the sleek browsing interface of popular streaming platforms with OpenAI's GPT recommendation engine. Built on React 19 and Redux Toolkit, it manages multi-lingual search, user authentication via Firebase, and real-time movie telemetry through the TMDB REST API.",
@@ -67,6 +94,7 @@ export const projectData = [
     id: "spotify-clone",
     title: "Spotify Clone",
     category: "Dynamic Web Audio Player",
+    categories: ["Interactive"],
     year: "2023",
     role: "Frontend & Custom Audio Player Engine",
     projectImg: projectImg2,
@@ -89,6 +117,7 @@ export const projectData = [
     id: "apple-clone",
     title: "Apple Clone",
     category: "Interactive Product Experience",
+    categories: ["Interactive"],
     year: "2023",
     role: "UI/UX Micro-Interactions & Layout",
     projectImg: projectImg3,
@@ -111,6 +140,7 @@ export const projectData = [
     id: "venom-trail",
     title: "Venom Trail",
     category: "Retro Arcade Game Engine",
+    categories: ["Games"],
     year: "2023",
     role: "Game Physics & DOM Manipulation",
     projectImg: projectImg4,

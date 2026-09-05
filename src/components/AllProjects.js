@@ -38,22 +38,23 @@ const AllProjects = () => {
   // Filter helper logic
   const matchesCategory = (project, category) => {
     if (category === "All") return true;
-    const catLower = project.category.toLowerCase();
-    const titleLower = project.title.toLowerCase();
+    if (project.categories && project.categories.includes(category)) return true;
+
+    const text = `${project.category || ""} `.toLowerCase();
 
     if (category === "AI") {
-      return catLower.includes("ai") || titleLower.includes("gpt");
+      return text.includes("ai") || text.includes("gpt") || text.includes("intelligence") || text.includes("rag") || text.includes("openai");
     }
     if (category === "FullStack") {
-      return catLower.includes("ecosystem") || catLower.includes("streaming") || catLower.includes("architecture");
+      return text.includes("full-stack") || text.includes("backend") || text.includes("architecture") || text.includes("ecosystem") || text.includes("next.js") || text.includes("supabase") || text.includes("firebase") || text.includes("systems");
     }
     if (category === "Interactive") {
-      return catLower.includes("audio") || catLower.includes("experience") || titleLower.includes("clone");
+      return text.includes("audio") || text.includes("clone") || text.includes("ui") || text.includes("interactive") || text.includes("experience");
     }
     if (category === "Games") {
-      return catLower.includes("game") || catLower.includes("arcade");
+      return text.includes("game") || text.includes("arcade") || text.includes("snake");
     }
-    return true;
+    return false;
   };
 
   const countCategory = (catId) => {
@@ -97,7 +98,7 @@ const AllProjects = () => {
 
       {/* Interactive Controls Bar: Category Filters */}
       <div className="archive-filter-bar mb-16 flex items-center justify-between gap-6 pb-6 border-b border-neutral-800/80">
-        
+
         {/* Category Filter Pills */}
         <div className="flex flex-wrap items-center gap-2.5">
           {CATEGORIES.map((cat) => {
@@ -108,17 +109,15 @@ const AllProjects = () => {
               <button
                 key={cat.id}
                 onClick={() => setActiveCategory(cat.id)}
-                className={`px-4 py-2 rounded-full text-xs font-planeBold tracking-wider transition-all duration-300 flex items-center gap-2 ${
-                  isActive
+                className={`px-4 py-2 rounded-full text-xs font-planeBold tracking-wider transition-all duration-300 flex items-center gap-2 ${isActive
                     ? "bg-[#d2b99f] text-black shadow-lg scale-105"
                     : "bg-neutral-900/80 border border-neutral-800 text-gray-400 hover:border-[#d2b99f]/40 hover:text-custom-vanila"
-                }`}
+                  }`}
               >
                 <span>{cat.label}</span>
                 <span
-                  className={`px-2 py-0.5 rounded-full text-[10px] font-mono ${
-                    isActive ? "bg-black/20 text-black" : "bg-neutral-800 text-gray-400"
-                  }`}
+                  className={`px-2 py-0.5 rounded-full text-[10px] font-mono ${isActive ? "bg-black/20 text-black" : "bg-neutral-800 text-gray-400"
+                    }`}
                 >
                   {count}
                 </span>

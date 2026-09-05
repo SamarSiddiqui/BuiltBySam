@@ -15,13 +15,13 @@ const MarqueeSection = () => {
         '.marquee-line-top',
         { xPercent: 0 },
         {
-          xPercent: -35,
+          xPercent: -12,
           ease: 'none',
           scrollTrigger: {
             trigger: containerRef.current,
             start: 'top bottom',
             end: 'bottom top',
-            scrub: 0.8,
+            scrub: 1.2,
           },
         }
       );
@@ -29,7 +29,7 @@ const MarqueeSection = () => {
       // Middle Playground Marquee line (glides left to right on scroll down)
       gsap.fromTo(
         '.marquee-line-middle',
-        { xPercent: -45 },
+        { xPercent: -10 },
         {
           xPercent: -5,
           ease: 'none',
@@ -37,7 +37,7 @@ const MarqueeSection = () => {
             trigger: containerRef.current,
             start: 'top bottom',
             end: 'bottom top',
-            scrub: 0.8,
+            scrub: 1.2,
           },
         }
       );
@@ -47,13 +47,13 @@ const MarqueeSection = () => {
         '.marquee-line-bottom',
         { xPercent: 0 },
         {
-          xPercent: -35,
+          xPercent: -12,
           ease: 'none',
           scrollTrigger: {
             trigger: containerRef.current,
             start: 'top bottom',
             end: 'bottom top',
-            scrub: 0.8,
+            scrub: 1.2,
           },
         }
       );
