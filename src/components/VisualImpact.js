@@ -82,7 +82,7 @@ const VisualImpact = () => {
   return (
     <div
       ref={visualHeadings}
-      className="visual-headings flex items-center min-h-[100vh] justify-center leading-[1.4] font-grandSlangItalic"
+      className="visual-headings hidden md:flex items-center min-h-[100vh] justify-center leading-[1.4] font-grandSlangItalic"
     >
       <div>
         <h1 className="heading-right text-[clamp(52px,12vw,200px)] flex items-center justify-evenly uppercase largerMobile:py-1">

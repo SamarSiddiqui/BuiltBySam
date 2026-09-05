@@ -15,7 +15,6 @@ const CATEGORIES = [
 
 const AllProjects = () => {
   const [activeCategory, setActiveCategory] = useState("All");
-  const [searchQuery, setSearchQuery] = useState("");
 
   // Scroll to top on mount
   useEffect(() => {
@@ -39,43 +38,32 @@ const AllProjects = () => {
   // Filter helper logic
   const matchesCategory = (project, category) => {
     if (category === "All") return true;
-    const catLower = project.category.toLowerCase();
-    const titleLower = project.title.toLowerCase();
+    if (project.categories && project.categories.includes(category)) return true;
+
+    const text = `${project.category || ""} `.toLowerCase();
 
     if (category === "AI") {
-      return catLower.includes("ai") || titleLower.includes("gpt");
+      return text.includes("ai") || text.includes("gpt") || text.includes("intelligence") || text.includes("rag") || text.includes("openai");
     }
     if (category === "FullStack") {
-      return catLower.includes("ecosystem") || catLower.includes("streaming") || catLower.includes("architecture");
+      return text.includes("full-stack") || text.includes("backend") || text.includes("architecture") || text.includes("ecosystem") || text.includes("next.js") || text.includes("supabase") || text.includes("firebase") || text.includes("systems");
     }
     if (category === "Interactive") {
-      return catLower.includes("audio") || catLower.includes("experience") || titleLower.includes("clone");
+      return text.includes("audio") || text.includes("clone") || text.includes("ui") || text.includes("interactive") || text.includes("experience");
     }
     if (category === "Games") {
-      return catLower.includes("game") || catLower.includes("arcade");
+      return text.includes("game") || text.includes("arcade") || text.includes("snake");
     }
-    return true;
+    return false;
   };
 
   const countCategory = (catId) => {
     return projectData.filter((p) => matchesCategory(p, catId)).length;
   };
 
-  const filteredProjects = projectData.filter((project) => {
-    const matchesCat = matchesCategory(project, activeCategory);
-
-    if (!searchQuery.trim()) return matchesCat;
-
-    const query = searchQuery.toLowerCase();
-    const matchesQuery =
-      project.title.toLowerCase().includes(query) ||
-      project.category.toLowerCase().includes(query) ||
-      project.description.toLowerCase().includes(query) ||
-      (project.role && project.role.toLowerCase().includes(query)) ||
-      (project.techNames && project.techNames.some((t) => t.toLowerCase().includes(query)));
-
-    return matchesCat && matchesQuery;
-  });
+  const filteredProjects = projectData.filter((project) =>
+    matchesCategory(project, activeCategory)
+  );
 
   return (
     <main className="min-h-screen pt-28 pb-24 text-custom-vanila relative max-w-7xl mx-auto px-6">
@@ -108,9 +96,9 @@ const AllProjects = () => {
         </p>
       </div>
 
-      {/* Interactive Controls Bar: Search & Category Filters */}
-      <div className="archive-filter-bar mb-16 flex flex-col md:flex-row md:items-center justify-between gap-6 pb-6 border-b border-neutral-800/80">
-        
+      {/* Interactive Controls Bar: Category Filters */}
+      <div className="archive-filter-bar mb-16 flex items-center justify-between gap-6 pb-6 border-b border-neutral-800/80">
+
         {/* Category Filter Pills */}
         <div className="flex flex-wrap items-center gap-2.5">
           {CATEGORIES.map((cat) => {
@@ -121,45 +109,21 @@ const AllProjects = () => {
               <button
                 key={cat.id}
                 onClick={() => setActiveCategory(cat.id)}
-                className={`px-4 py-2 rounded-full text-xs font-planeBold tracking-wider transition-all duration-300 flex items-center gap-2 ${
-                  isActive
+                className={`px-4 py-2 rounded-full text-xs font-planeBold tracking-wider transition-all duration-300 flex items-center gap-2 ${isActive
                     ? "bg-[#d2b99f] text-black shadow-lg scale-105"
                     : "bg-neutral-900/80 border border-neutral-800 text-gray-400 hover:border-[#d2b99f]/40 hover:text-custom-vanila"
-                }`}
+                  }`}
               >
                 <span>{cat.label}</span>
                 <span
-                  className={`px-2 py-0.5 rounded-full text-[10px] font-mono ${
-                    isActive ? "bg-black/20 text-black" : "bg-neutral-800 text-gray-400"
-                  }`}
+                  className={`px-2 py-0.5 rounded-full text-[10px] font-mono ${isActive ? "bg-black/20 text-black" : "bg-neutral-800 text-gray-400"
+                    }`}
                 >
                   {count}
                 </span>
               </button>
             );
           })}
-        </div>
-
-        {/* Real-time Search Input */}
-        <div className="relative w-full md:w-72">
-          <input
-            type="text"
-            placeholder="Search projects or tech..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full bg-neutral-900/90 border border-neutral-800 rounded-full py-2.5 pl-10 pr-10 text-xs font-planeLight text-gray-200 placeholder-gray-500 focus:outline-none focus:border-[#d2b99f]/60 transition-colors"
-          />
-          <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-500 text-xs">
-            🔍
-          </span>
-          {searchQuery && (
-            <button
-              onClick={() => setSearchQuery("")}
-              className="absolute right-3.5 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white text-xs"
-            >
-              ✕
-            </button>
-          )}
         </div>
 
       </div>
@@ -177,16 +141,13 @@ const AllProjects = () => {
           <span className="text-4xl mb-4 block">🔍</span>
           <h3 className="text-xl font-grandSlangRoman text-[#d2b99f] mb-2">No Matching Projects Found</h3>
           <p className="text-gray-400 text-sm font-planeLight mb-6">
-            No projects matched "{searchQuery}" under the selected category.
+            No projects found under the selected category.
           </p>
           <button
-            onClick={() => {
-              setActiveCategory("All");
-              setSearchQuery("");
-            }}
+            onClick={() => setActiveCategory("All")}
             className="px-6 py-2.5 rounded-full bg-[#d2b99f] text-black font-planeBold text-xs uppercase hover:bg-white transition-colors"
           >
-            Reset Filters
+            Reset Category Filter
           </button>
         </div>
       )}

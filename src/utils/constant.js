@@ -1,3 +1,4 @@
+import zenithImg from '../assets/Projects/zenith_bg_img.png'
 import sproutlyImg from '../assets/Projects/sproutlyBg.avif'
 import projectImg1 from '../assets/Projects/netflixBg.png'
 import projectImg2 from '../assets/Projects/spotifyBg.png'
@@ -13,25 +14,51 @@ import html from '../assets/tech-icons/html.png'
 import api from '../assets/tech-icons/api.png'
 import json from '../assets/tech-icons/json.webp'
 import claudeCertImg from '../assets/certifications/claude_certification.jpg'
+import claudeMcpCertImg from '../assets/certifications/claude_mcp_certificate.png'
 import helsinkiCertImg from '../assets/certifications/certificate-elements-of-ai.png'
 import fccBackendCertImg from '../assets/certifications/backend_freecode_certificate.avif'
 
 export const projectData = [
   {
+    id: "zenith",
+    title: "Zenith",
+    category: "Behavioral Consistency & Habit Intelligence",
+    categories: ["AI", "FullStack"],
+    year: "2025",
+    role: "Full-Stack Architecture & Systems Design",
+    projectImg: zenithImg,
+    description: "Most habit trackers break your momentum: miss a single day, and your streak resets to zero. Zenith is a behavioral consistency system built for real, unpredictable schedules. Instead of all-or-nothing streaks, Zenith calculates a resilient Habit Health Index, maps your actual usable time gaps around work shifts, and automatically auto-scales 45-minute habits into 5-minute micro-sessions when life gets busy — ensuring your momentum never resets to zero.",
+    overview: "Traditional habit trackers fail because they demand 24-hour perfection: miss one day, and weeks of hard work reset to zero, triggering guilt and app abandonment. I built Zenith to replace streak anxiety with true behavioral resilience. Zenith calculates your real available energy windows around busy work shifts, detects schedule fatigue before your habits break, and uses a 'Shrink, Don't Skip' system to dynamically adapt full routines into quick micro-sessions on overwhelming days — keeping your habit identity alive without the guilt.",
+    highlights: [
+      "Dynamic Habit Health Index (0–100%) replacing fragile binary streak resets",
+      "Usable Working Window Engine mapping habits inside real available time gaps",
+      "'Shrink, Don't Skip' micro-sessions auto-scaling routines during high-fatigue days",
+      "Schedule-Tied Root Cause Diagnosis pinpointing contextual triggers for missed habits",
+      "Built with Next.js 14, Supabase backend, RAG, and OpenAI integration"
+    ],
+    techStack: [react, tailwind, api, json],
+    techNames: ["Next.js 14", "Supabase", "GSAP", "RAG", "OpenAI API"],
+    links: {
+      liveLink: "https://zenithf1ow.vercel.app/",
+      sourceLink: "https://github.com/SamarSiddiqui/Zenith"
+    }
+  },
+  {
     id: "sproutly",
     title: "Sproutly",
-    category: "AI Botany & Plant Care Ecosystem",
+    category: "Smart Urban Plant Care & AI Companion",
+    categories: ["AI", "FullStack"],
     year: "2024",
     role: "Full-Stack Architecture & AI Systems",
     projectImg: sproutlyImg,
-    description: "Sproutly is an intelligent digital greenhouse companion designed to eliminate urban plant parent burnout. Built with Next.js 14, Supabase, real-time weather telemetry, and OpenAI, it converts static watering calendars into dynamic, weather-aware care routines.",
-    overview: "As an engineer passionate about botany and modern web architecture, I built Sproutly to solve a common real-world problem: static plant tracking apps fail to account for weather shifts or species-specific nuances. Sproutly acts as an automated digital greenhouse dashboard. It monitors real-time geographical weather data to trigger smart 'Rain Delay' watering skips, provides natural language AI search across plant collections, and structures user data safely with Supabase Row Level Security.",
+    description: "Sproutly is your smart balcony & terrace garden companion built for city dwellers. Just log your plants, and Sproutly handles the rest — generating personalized watering and fertilizing schedules, auto-adjusting care plans when it rains, and powering Sproutly AI, a 24/7 expert assistant that knows your garden inside out.",
+    overview: "Gardening in the city should be fun, not stressful. I built Sproutly to make urban plant care effortless for anyone running a balcony or terrace garden. Simply log your plants to get a personalized care plan detailing exactly when to water, fertilize, and take care of your greens. Sproutly syncs with live local weather to auto-delay watering after heavy rainfall so you never overwater. Plus, Sproutly AI is always ready to chat — offering instant, tailored advice based on your specific plant collection.",
     highlights: [
-      "Proactive AI Care Advisor analyzing seasonal & species telemetry",
-      "Weather-aware automation triggering 'Rain Delay' skips on high precipitation",
-      "Natural language AI collection search & conversational query filtering",
-      "Supabase PostgreSQL database secured with Row Level Security (RLS)",
-      "TanStack Query client caching & Recharts environmental analytics"
+      "Personalized watering & fertilizing schedules tailored to your balcony garden",
+      "Smart weather sync that auto-adjusts watering schedules after heavy rainfall",
+      "Sproutly AI assistant for instant, personalized plant care advice 24/7",
+      "Easy plant logging to track growth, health, and care history effortlessly",
+      "Built with Next.js 14, Supabase backend, and OpenAI integration"
     ],
     techStack: [react, tailwind, api, json],
     techNames: ["Next.js 14", "Supabase (PostgreSQL)", "GSAP", "OpenAI API"],
@@ -44,8 +71,9 @@ export const projectData = [
     id: "netflix-gpt",
     title: "Netflix-GPT",
     category: "AI Movie Discovery & Streaming App",
+    categories: ["AI"],
     year: "2024",
-    role: "Full-Stack Architecture & AI Integration",
+    role: "Frontend Architecture & AI Integration",
     projectImg: projectImg1,
     description: 'Step into Netflix-GPT, your AI-powered movie companion! Enjoy personalized film suggestions with GPT, real-time "Airing Today" updates, and trending topics—all fetched seamlessly from the TMDB API. Effortlessly uncover your next favorite movie with intelligent recommendations and live data integration.',
     overview: "Netflix-GPT combines the sleek browsing interface of popular streaming platforms with OpenAI's GPT recommendation engine. Built on React 19 and Redux Toolkit, it manages multi-lingual search, user authentication via Firebase, and real-time movie telemetry through the TMDB REST API.",
@@ -66,6 +94,7 @@ export const projectData = [
     id: "spotify-clone",
     title: "Spotify Clone",
     category: "Dynamic Web Audio Player",
+    categories: ["Interactive"],
     year: "2023",
     role: "Frontend & Custom Audio Player Engine",
     projectImg: projectImg2,
@@ -88,6 +117,7 @@ export const projectData = [
     id: "apple-clone",
     title: "Apple Clone",
     category: "Interactive Product Experience",
+    categories: ["Interactive"],
     year: "2023",
     role: "UI/UX Micro-Interactions & Layout",
     projectImg: projectImg3,
@@ -110,6 +140,7 @@ export const projectData = [
     id: "venom-trail",
     title: "Venom Trail",
     category: "Retro Arcade Game Engine",
+    categories: ["Games"],
     year: "2023",
     role: "Game Physics & DOM Manipulation",
     projectImg: projectImg4,
@@ -180,6 +211,15 @@ export const certificationData = [
     credentialUrl: "https://freecodecamp.org/certification/samarsiddiqui/back-end-development-and-apis-v9",
     tags: ["Node.js", "Express", "MongoDB", "Mongoose", "REST APIs"],
     certImg: fccBackendCertImg
+  },
+  {
+    id: "cert-4",
+    title: "Claude & Model Context Protocol (MCP)",
+    issuer: "Anthropic / Skilljar",
+    date: "2026",
+    credentialUrl: "https://verify.skilljar.com/c/8eyovok5ac7i",
+    tags: ["Claude", "MCP", "Model Context Protocol", "AI Tooling"],
+    certImg: claudeMcpCertImg
   }
 ];
 

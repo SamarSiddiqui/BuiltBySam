@@ -13,15 +13,15 @@ const MarqueeSection = () => {
       // Top Marquee line (glides right to left on scroll down)
       gsap.fromTo(
         '.marquee-line-top',
-        { xPercent: 5 },
+        { xPercent: 0 },
         {
-          xPercent: -25,
+          xPercent: -12,
           ease: 'none',
           scrollTrigger: {
             trigger: containerRef.current,
             start: 'top bottom',
             end: 'bottom top',
-            scrub: 0.8,
+            scrub: 1.2,
           },
         }
       );
@@ -29,15 +29,15 @@ const MarqueeSection = () => {
       // Middle Playground Marquee line (glides left to right on scroll down)
       gsap.fromTo(
         '.marquee-line-middle',
-        { xPercent: -25 },
+        { xPercent: -10 },
         {
-          xPercent: 5,
+          xPercent: -5,
           ease: 'none',
           scrollTrigger: {
             trigger: containerRef.current,
             start: 'top bottom',
             end: 'bottom top',
-            scrub: 0.8,
+            scrub: 1.2,
           },
         }
       );
@@ -45,15 +45,15 @@ const MarqueeSection = () => {
       // Bottom Marquee line (glides right to left on scroll down)
       gsap.fromTo(
         '.marquee-line-bottom',
-        { xPercent: 5 },
+        { xPercent: 0 },
         {
-          xPercent: -25,
+          xPercent: -12,
           ease: 'none',
           scrollTrigger: {
             trigger: containerRef.current,
             start: 'top bottom',
             end: 'bottom top',
-            scrub: 0.8,
+            scrub: 1.2,
           },
         }
       );
@@ -61,10 +61,15 @@ const MarqueeSection = () => {
     { scope: containerRef }
   );
 
-  const topBottomText =
-    "Playing / Trying / Sleeping / Failing / Dreaming / Playing / Trying / Sleeping / Failing / Dreaming / Playing / Trying / Sleeping / Failing / Dreaming / Playing / Trying / Sleeping / Failing / Dreaming / ";
+  const topBottomText = Array(8)
+    .fill(
+      "Playing / Trying / Sleeping / Failing / Dreaming / "
+    )
+    .join("");
 
-  const middleText = Array(12).fill("MY PLAYGROUND \u00A0\u2022\u00A0 ").join("");
+  const middleText = Array(32)
+    .fill("MY PLAYGROUND \u00A0\u2022\u00A0 ")
+    .join("");
 
   return (
     <section
